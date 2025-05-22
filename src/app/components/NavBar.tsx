@@ -310,10 +310,11 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaChartLine, FaUserMd, FaFileInvoiceDollar, FaPhoneAlt } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { FaBars, FaPhoneAlt, FaTimes } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
+import Link from 'next/link';
 
 interface DropdownItem {
   icon: React.ReactNode;
@@ -351,19 +352,20 @@ const NavBar = () => {
   };
 
   const navLinks: NavLink[] = [
-    { name: 'Home', href: '#home' },
-    { 
-      name: 'Services', 
-      href: '#services',
-      dropdown: [
-        { icon: <FaFileInvoiceDollar />, name: 'Medical Billing', desc: 'End-to-end billing solutions' },
-        { icon: <FaChartLine />, name: 'Revenue Cycle', desc: 'Optimize your revenue flow' },
-        { icon: <FaUserMd />, name: 'Provider Solutions', desc: 'Tailored for practitioners' }
-      ]
-    },
-    { name: 'About', href: '#about' },
-    { name: 'HIPA', href: '#hipa' },
-    // { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+     { name: 'About', href: '/about' },
+    // { 
+    //   name: 'Services', 
+    //   href: '#services',
+    //   dropdown: [
+    //     { icon: <FaFileInvoiceDollar />, name: 'Medical Billing', desc: 'End-to-end billing solutions' },
+    //     { icon: <FaChartLine />, name: 'Revenue Cycle', desc: 'Optimize your revenue flow' },
+    //     { icon: <FaUserMd />, name: 'Provider Solutions', desc: 'Tailored for practitioners' }
+    //   ]
+    // },
+    { name: 'Services', href: '/services' },
+    { name: 'HIPPA', href: '/hippa' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   // Animation variants
@@ -460,9 +462,9 @@ const NavBar = () => {
             animate={scrolled ? "scrolled" : "normal"}
             whileHover={{ scale: 1.05 }}
           >
-            <a href="#home" className="text-2xl font-bold text-blue-600">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
               MedBill<span className="text-gray-800">Pro</span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}

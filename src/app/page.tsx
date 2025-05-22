@@ -8,6 +8,9 @@ import ServicesSection from './components/ServicesSection'
 import HIPAAComplianceSection from './components/HIPAAComplianceSection'
 import ProcessFlowSection from './components/ProcessFlowSection'
 import TestimonialSection from './components/TestimonialSection'
+import RCMProcess from './components/RCMProcess'
+import FAQSection from './components/FAQSection'
+import CoreValuesSection from './components/CoreValuesSection'
 
 
 const page = () => {
@@ -16,11 +19,14 @@ const page = () => {
     <NavBar />
     <HeroSection />
     <TrustIndicators />
+    <CoreValuesSection />
     <WhyChooseUs  />
     <ServicesSection />
-    <HIPAAComplianceSection />
+    <RCMProcess />
+    <HIPAAComplianceSection /> 
     <ProcessFlowSection />
     <TestimonialSection />  
+    <FAQSection />
     <Footer />
     </>
   )

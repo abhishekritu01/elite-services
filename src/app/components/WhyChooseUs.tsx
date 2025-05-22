@@ -1,13 +1,32 @@
 'use client';
-import { useAnimation, useInView } from 'framer-motion';
+
+import { motion, useAnimation, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
-import { FaChartLine, FaClinicMedical, FaHandHoldingUsd, FaHeadset, FaShieldAlt, FaUserTie } from 'react-icons/fa';
+import { useEffect, useRef, useState } from 'react';
+import {
+  FaChartLine,
+  FaClinicMedical,
+  FaHandHoldingUsd,
+  FaHeadset,
+  FaRegChartBar,
+  FaRegClock,
+  FaRegLightbulb,
+  FaShieldAlt,
+  FaUserTie
+} from 'react-icons/fa';
+import { IoMdRibbon } from 'react-icons/io';
+import {
+  RiArrowRightUpLine,
+  RiMedalFill,
+  RiPulseFill,
+  RiShieldStarFill
+} from 'react-icons/ri';
 
 const WhyChooseUs = () => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hoveredStat, setHoveredStat] = useState<number | null>(null);
 
   useEffect(() => {
     if (isInView) {
@@ -21,108 +40,344 @@ const WhyChooseUs = () => {
       label: "Years Experience", 
       icon: <FaClinicMedical className="text-white" />, 
       bgColor: "bg-blue-600",
-      hoverText: "Trusted by hundreds of practices"
+      hoverText: "Trusted by hundreds of practices nationwide",
+      decoration: <IoMdRibbon className="absolute -right-2 -top-2 text-yellow-400 text-2xl" />
     },
     { 
       value: "98%", 
       label: "Clean Claims", 
       icon: <FaChartLine className="text-white" />, 
       bgColor: "bg-green-600",
-      hoverText: "Industry-leading first-pass acceptance rate"
+      hoverText: "Industry-leading first-pass acceptance rate",
+      decoration: <RiShieldStarFill className="absolute -right-2 -top-2 text-white text-xl" />
     },
     { 
       value: "500+", 
       label: "Providers", 
       icon: <FaUserTie className="text-white" />, 
       bgColor: "bg-purple-600",
-      hoverText: "Serving practices across all specialties"
+      hoverText: "Serving practices across all specialties",
+      decoration: <RiPulseFill className="absolute -right-2 -top-2 text-white text-xl" />
     },
     { 
       value: "24/7", 
       label: "Support", 
       icon: <FaHeadset className="text-white" />, 
       bgColor: "bg-orange-600",
-      hoverText: "Dedicated account managers always available"
+      hoverText: "Dedicated account managers always available",
+      decoration: <RiMedalFill className="absolute -right-2 -top-2 text-white text-xl" />
     }
   ];
 
   const benefits = [
-    { icon: <FaUserTie className="text-blue-600" />, text: "Certified Experts" },
-    { icon: <FaHandHoldingUsd className="text-green-600" />, text: "No Hidden Fees" },
-    { icon: <FaShieldAlt className="text-purple-600" />, text: "HIPAA Secure" }
+    { 
+      icon: <FaUserTie className="text-blue-600" />, 
+      text: "Certified Experts",
+      description: "Our team holds AAPC and AHIMA certifications"
+    },
+    { 
+      icon: <FaHandHoldingUsd className="text-green-600" />, 
+      text: "No Hidden Fees",
+      description: "Transparent pricing with no surprises"
+    },
+    { 
+      icon: <FaShieldAlt className="text-purple-600" />, 
+      text: "HIPAA Secure",
+      description: "Enterprise-grade security protocols"
+    },
+    { 
+      icon: <FaRegClock className="text-amber-600" />, 
+      text: "Fast Turnaround",
+      description: "Claims submitted within 24 hours"
+    },
+    { 
+      icon: <FaRegChartBar className="text-red-600" />, 
+      text: "Real-time Reporting",
+      description: "Dashboard with live financial metrics"
+    },
+    { 
+      icon: <FaRegLightbulb className="text-indigo-600" />, 
+      text: "Smart Technology",
+      description: "AI-powered claim scrubbing"
+    }
   ];
 
   return (
-    <div className="bg-white py-12 md:py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">
-            Why <span className="text-blue-600">Choose Us</span>
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Proven results for healthcare providers
-          </p>
-        </div>
+    <div className="relative bg-white py-16 md:py-24 overflow-hidden">
+      {/* Floating background elements */}
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        <motion.div 
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-100 rounded-full filter blur-xl"
+        />
+        <motion.div
+          animate={{
+            x: [0, -80, 0],
+            y: [0, 60, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
+            delay: 5
+          }}
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-100 rounded-full filter blur-xl"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Header with animated gradient text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.div 
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "spring" }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-4"
+          >
+            <RiShieldStarFill className="mr-2" />
+            <span className="font-medium">TRUSTED PARTNER</span>
+          </motion.div>
+          
+          <motion.h2
+            animate={{
+              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{
+              backgroundImage: 'linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6)',
+              backgroundSize: '200% auto',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              color: 'transparent',
+            }}
+          >
+            Why Healthcare Providers Choose Us
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
+          >
+            Proven results and exceptional service for practices of all sizes
+          </motion.p>
+        </motion.div>
 
         {/* Side-by-side layout */}
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
-          {/* Image */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative rounded-xl overflow-hidden aspect-video">
+        <div className="flex flex-col lg:flex-row gap-12 ">
+          {/* Image with floating animation */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-1/2 relative "
+          >
+              <div className="relative rounded-2xl overflow-hidden aspect-video shadow-xl border-8 border-white">
               <Image
                 src="/elite/undraw_join_6quk.svg"
                 alt="Medical billing expertise"
                 layout="fill"
                 objectFit="fill"
+                className="hover:scale-105 transition-transform duration-500"
               />
+              
+              {/* Floating badge on image */}
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-xl shadow-lg border border-gray-100 z-10"
+              >
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <FaChartLine className="text-blue-600" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500">Average</p>
+                    <p className="font-bold text-gray-900">27% Revenue ↑</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
-          </div>
+
+            
+
+           
+          </motion.div>
 
           {/* Content */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+          <motion.div 
+            ref={ref}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-1/2 flex flex-col justify-center"
+          >
+            {/* Stats grid with flip animation */}
+            <div className="grid grid-cols-2 gap-5 mb-10">
               {stats.map((stat, index) => (
-                <div 
+                <motion.div
                   key={index}
-                  className="bg-white p-5 rounded-lg shadow-sm border border-gray-100 relative overflow-hidden group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  onHoverStart={() => setHoveredStat(index)}
+                  onHoverEnd={() => setHoveredStat(null)}
+                  className="relative h-40"
                 >
-                  <div className={`w-12 h-12 ${stat.bgColor} rounded-full flex items-center justify-center mb-3`}>
-                    {stat.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">
-                    {stat.value}
-                  </h3>
-                  <p className="text-sm font-medium text-gray-700 mb-2">
-                    {stat.label}
-                  </p>
-                  <div className="absolute inset-0 bg-white p-5 flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-sm text-gray-600">
-                      {stat.hoverText}
-                    </p>
-                  </div>
-                </div>
+                  <motion.div
+                    className={`absolute inset-0 p-6 rounded-xl shadow-md ${stat.bgColor} text-white`}
+                    animate={{
+                      rotateY: hoveredStat === index ? 180 : 0,
+                    }}
+                    transition={{ duration: 0.6 }}
+                    style={{
+                      backfaceVisibility: 'hidden',
+                      transformStyle: 'preserve-3d'
+                    }}
+                  >
+                    <div className="flex flex-col h-full justify-between">
+                      <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-4">
+                        {stat.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-bold mb-1">{stat.value}</h3>
+                        <p className="text-sm font-medium">{stat.label}</p>
+                      </div>
+                      {stat.decoration}
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    className={`absolute inset-0 p-6 rounded-xl shadow-md bg-white text-gray-800`}
+                    animate={{
+                      rotateY: hoveredStat === index ? 0 : 180,
+                    }}
+                    transition={{ duration: 0.6 }}
+                    style={{
+                      backfaceVisibility: 'hidden',
+                      transformStyle: 'preserve-3d'
+                    }}
+                  >
+                    <div className="h-full flex items-center">
+                      <p className="text-sm">{stat.hoverText}</p>
+                    </div>
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
 
-            {/* Benefits bar */}
-            <div className="flex flex-wrap gap-3">
-              {benefits.map((benefit, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full"
-                >
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-xs">
-                    {benefit.icon}
-                  </div>
-                  <span className="text-sm font-medium text-gray-700">
-                    {benefit.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+            {/* Benefits with staggered animation */}
+            <motion.div className="mb-10">
+              <motion.h3 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-lg font-semibold text-gray-900 mb-4"
+              >
+                Key Advantages:
+              </motion.h3>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                    className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all"
+                  >
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center mr-3">
+                        {benefit.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">{benefit.text}</h4>
+                        <p className="text-xs text-gray-500 mt-1">{benefit.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* CTA with shine effect */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.button
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0px 5px 15px rgba(59, 130, 246, 0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="relative overflow-hidden group w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-lg"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/50 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-full group-hover:translate-x-0" />
+                <span className="relative flex items-center justify-center">
+                  <span>Get Started Today</span>
+                  <motion.span
+                    animate={{
+                      x: [0, 5, 0],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse"
+                    }}
+                    className="ml-3"
+                  >
+                    <RiArrowRightUpLine className="text-lg" />
+                  </motion.span>
+                </span>
+              </motion.button>
+              
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                viewport={{ once: true }}
+                className="text-center sm:text-left text-sm text-gray-500 mt-4 flex items-center justify-center sm:justify-start"
+              >
+                <RiMedalFill className="text-yellow-400 mr-2" />
+                Trusted by leading healthcare organizations
+              </motion.p>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>
