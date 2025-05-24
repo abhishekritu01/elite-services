@@ -234,7 +234,7 @@ const TrustIndicators = () => {
               className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent"
             />
             <RiShieldCheckFill className="mr-2" />
-            <span className="font-medium relative z-10">TRUSTED BY 500+ PROVIDERS</span>
+            <span className="font-medium relative z-10 ">TRUSTED BY 500+ PROVIDERS</span>
           </motion.div>
           
           <motion.h2

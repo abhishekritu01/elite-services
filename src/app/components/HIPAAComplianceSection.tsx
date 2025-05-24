@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { RiShieldKeyholeFill, RiLockPasswordFill, RiFileShieldFill, RiHealthBookFill, RiAlertFill } from 'react-icons/ri';
 import { FaUserShield, FaClipboardCheck } from 'react-icons/fa';
+import { IoIosTrendingUp } from 'react-icons/io';
+import { IoMdRibbon } from 'react-icons/io';
 
 const HIPAAComplianceSection = () => {
   const features = [
@@ -63,7 +65,7 @@ const HIPAAComplianceSection = () => {
             <span className="font-medium">COMPLIANCE</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               HIPAA Compliance
             </span> You Can Trust
           </h2>
@@ -88,7 +90,7 @@ const HIPAAComplianceSection = () => {
               <p className="text-gray-700 mb-6">
                 The <strong>Health Insurance Portability and Accountability Act of 1996</strong> (HIPAA) is a U.S. federal law designed to:
               </p>
-              
+
               <ul className="space-y-4 mb-8">
                 {[
                   "Protect patients' sensitive health information",
@@ -177,22 +179,49 @@ const HIPAAComplianceSection = () => {
             </div>
           </motion.div>
         </div>
+        <div className="text-center mt-12">
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="relative inline-flex items-center px-8 py-4 overflow-hidden border border-transparent md:text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
+          >
+            <span className="absolute inset-0 overflow-hidden">
+              <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
+            </span>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-shadow">
-            Request Our HIPAA Compliance Report
-          </div>
+            <span className="relative flex items-center">
+              <span>Request Our HIPAA Compliance Report</span>
+              <motion.span
+                animate={{
+                  x: [0, 4, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+                className="ml-3"
+              >
+                <IoIosTrendingUp className="text-xl" />
+              </motion.span>
+            </span>
+
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="absolute -right-4 -top-4 text-blue-300 opacity-30 text-6xl"
+            >
+              <IoMdRibbon />
+            </motion.div>
+          </motion.button>
           <p className="text-gray-500 mt-4 text-sm">
             All our systems meet or exceed HIPAA security requirements
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

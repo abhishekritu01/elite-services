@@ -1,5 +1,4 @@
 'use client';
-
 import { motion, useAnimation, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
@@ -14,9 +13,8 @@ import {
   FaShieldAlt,
   FaUserTie
 } from 'react-icons/fa';
-import { IoMdRibbon } from 'react-icons/io';
+import { IoIosTrendingUp, IoMdRibbon } from 'react-icons/io';
 import {
-  RiArrowRightUpLine,
   RiMedalFill,
   RiPulseFill,
   RiShieldStarFill
@@ -35,34 +33,34 @@ const WhyChooseUs = () => {
   }, [controls, isInView]);
 
   const stats = [
-    { 
-      value: "14+", 
-      label: "Years Experience", 
-      icon: <FaClinicMedical className="text-white" />, 
+    {
+      value: "14+",
+      label: "Years Experience",
+      icon: <FaClinicMedical className="text-white" />,
       bgColor: "bg-blue-600",
       hoverText: "Trusted by hundreds of practices nationwide",
       decoration: <IoMdRibbon className="absolute -right-2 -top-2 text-yellow-400 text-2xl" />
     },
-    { 
-      value: "98%", 
-      label: "Clean Claims", 
-      icon: <FaChartLine className="text-white" />, 
+    {
+      value: "98%",
+      label: "Clean Claims",
+      icon: <FaChartLine className="text-white" />,
       bgColor: "bg-green-600",
       hoverText: "Industry-leading first-pass acceptance rate",
       decoration: <RiShieldStarFill className="absolute -right-2 -top-2 text-white text-xl" />
     },
-    { 
-      value: "500+", 
-      label: "Providers", 
-      icon: <FaUserTie className="text-white" />, 
+    {
+      value: "500+",
+      label: "Providers",
+      icon: <FaUserTie className="text-white" />,
       bgColor: "bg-purple-600",
       hoverText: "Serving practices across all specialties",
       decoration: <RiPulseFill className="absolute -right-2 -top-2 text-white text-xl" />
     },
-    { 
-      value: "24/7", 
-      label: "Support", 
-      icon: <FaHeadset className="text-white" />, 
+    {
+      value: "24/7",
+      label: "Support",
+      icon: <FaHeadset className="text-white" />,
       bgColor: "bg-orange-600",
       hoverText: "Dedicated account managers always available",
       decoration: <RiMedalFill className="absolute -right-2 -top-2 text-white text-xl" />
@@ -70,33 +68,33 @@ const WhyChooseUs = () => {
   ];
 
   const benefits = [
-    { 
-      icon: <FaUserTie className="text-blue-600" />, 
+    {
+      icon: <FaUserTie className="text-blue-600" />,
       text: "Certified Experts",
       description: "Our team holds AAPC and AHIMA certifications"
     },
-    { 
-      icon: <FaHandHoldingUsd className="text-green-600" />, 
+    {
+      icon: <FaHandHoldingUsd className="text-green-600" />,
       text: "No Hidden Fees",
       description: "Transparent pricing with no surprises"
     },
-    { 
-      icon: <FaShieldAlt className="text-purple-600" />, 
+    {
+      icon: <FaShieldAlt className="text-purple-600" />,
       text: "HIPAA Secure",
       description: "Enterprise-grade security protocols"
     },
-    { 
-      icon: <FaRegClock className="text-amber-600" />, 
+    {
+      icon: <FaRegClock className="text-amber-600" />,
       text: "Fast Turnaround",
       description: "Claims submitted within 24 hours"
     },
-    { 
-      icon: <FaRegChartBar className="text-red-600" />, 
+    {
+      icon: <FaRegChartBar className="text-red-600" />,
       text: "Real-time Reporting",
       description: "Dashboard with live financial metrics"
     },
-    { 
-      icon: <FaRegLightbulb className="text-indigo-600" />, 
+    {
+      icon: <FaRegLightbulb className="text-indigo-600" />,
       text: "Smart Technology",
       description: "AI-powered claim scrubbing"
     }
@@ -106,7 +104,7 @@ const WhyChooseUs = () => {
     <div className="relative bg-white py-16 md:py-24 overflow-hidden">
       {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        <motion.div 
+        <motion.div
           animate={{
             x: [0, 100, 0],
             y: [0, -50, 0],
@@ -142,7 +140,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
             transition={{ type: "spring" }}
@@ -151,28 +149,13 @@ const WhyChooseUs = () => {
             <RiShieldStarFill className="mr-2" />
             <span className="font-medium">TRUSTED PARTNER</span>
           </motion.div>
-          
-          <motion.h2
-            animate={{
-              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="text-3xl md:text-4xl font-bold mb-4"
-            style={{
-              backgroundImage: 'linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6)',
-              backgroundSize: '200% auto',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              color: 'transparent',
-            }}
-          >
-            Why Healthcare Providers Choose Us
-          </motion.h2>
-          
+
+           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              Why Healthcare 
+            </span>  Why Healthcare 
+          </h2>
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -186,14 +169,13 @@ const WhyChooseUs = () => {
         {/* Side-by-side layout */}
         <div className="flex flex-col lg:flex-row gap-12 ">
           {/* Image with floating animation */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/2 relative "
-          >
-              <div className="relative rounded-2xl overflow-hidden aspect-video shadow-xl border-8 border-white">
+            className="w-full lg:w-1/2 relative ">
+            <div className="relative rounded-2xl overflow-hidden aspect-video  md:aspect-[calc(4*3+1)/4] lg:aspect-[calc(4*3+1)/16]  shadow-xl border-8 border-white">
               <Image
                 src="/elite/undraw_join_6quk.svg"
                 alt="Medical billing expertise"
@@ -201,7 +183,7 @@ const WhyChooseUs = () => {
                 objectFit="fill"
                 className="hover:scale-105 transition-transform duration-500"
               />
-              
+
               {/* Floating badge on image */}
               <motion.div
                 animate={{
@@ -225,14 +207,10 @@ const WhyChooseUs = () => {
                 </div>
               </motion.div>
             </div>
-
-            
-
-           
           </motion.div>
 
           {/* Content */}
-          <motion.div 
+          <motion.div
             ref={ref}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -275,7 +253,7 @@ const WhyChooseUs = () => {
                       {stat.decoration}
                     </div>
                   </motion.div>
-                  
+
                   <motion.div
                     className={`absolute inset-0 p-6 rounded-xl shadow-md bg-white text-gray-800`}
                     animate={{
@@ -297,7 +275,7 @@ const WhyChooseUs = () => {
 
             {/* Benefits with staggered animation */}
             <motion.div className="mb-10">
-              <motion.h3 
+              <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
@@ -306,7 +284,7 @@ const WhyChooseUs = () => {
               >
                 Key Advantages:
               </motion.h3>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {benefits.map((benefit, index) => (
                   <motion.div
@@ -333,50 +311,59 @@ const WhyChooseUs = () => {
             </motion.div>
 
             {/* CTA with shine effect */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.button
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0px 5px 15px rgba(59, 130, 246, 0.3)"
-                }}
-                whileTap={{ scale: 0.98 }}
-                className="relative overflow-hidden group w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-lg"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/50 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-full group-hover:translate-x-0" />
-                <span className="relative flex items-center justify-center">
-                  <span>Get Started Today</span>
-                  <motion.span
-                    animate={{
-                      x: [0, 5, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse"
-                    }}
-                    className="ml-3"
+            <div className='flex justify-center'>
+              <div className="mt-6 flex flex-col w-84 justify-center space-x-4">
+                <motion.button
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative inline-flex items-center px-8 py-4 overflow-hidden border border-transparent text-sm md:text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
+                >
+                  <span className="absolute inset-0 overflow-hidden">
+                    <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
+                  </span>
+
+                  <span className="relative flex items-center">
+                    <span>Get Started Today</span>
+                    <motion.span
+                      animate={{
+                        x: [0, 4, 0],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        repeatType: "reverse"
+                      }}
+                      className="ml-3"
+                    >
+                      <IoIosTrendingUp className="text-xl" />
+                    </motion.span>
+                  </span>
+
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ delay: 0.8 }}
+                    className="absolute -right-4 -top-4 text-blue-300 opacity-30 text-6xl"
                   >
-                    <RiArrowRightUpLine className="text-lg" />
-                  </motion.span>
-                </span>
-              </motion.button>
-              
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 1 }}
-                viewport={{ once: true }}
-                className="text-center sm:text-left text-sm text-gray-500 mt-4 flex items-center justify-center sm:justify-start"
-              >
-                <RiMedalFill className="text-yellow-400 mr-2" />
-                Trusted by leading healthcare organizations
-              </motion.p>
-            </motion.div>
+                    <IoMdRibbon />
+                  </motion.div>
+
+                </motion.button>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 1 }}
+                  viewport={{ once: true }}
+                  className="text-center sm:text-left text-sm text-gray-500 mt-4 flex items-center justify-center sm:justify-start"
+                >
+                  <RiMedalFill className="text-yellow-400 mr-2" />
+                  Trusted by leading healthcare organizations
+                </motion.p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
