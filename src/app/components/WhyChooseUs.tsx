@@ -101,7 +101,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="relative bg-white py-16 md:py-24 overflow-hidden">
+    <div className="relative bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 overflow-hidden">
       {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <motion.div

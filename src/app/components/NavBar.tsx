@@ -54,7 +54,7 @@ const NavBar = () => {
     //   ]
     // },
     { name: 'Services', href: '/services' },
-    { name: 'HIPAA', href: '/hipaa' },
+    { name: 'HIPAA', href: '/hippa' },
     { name: 'Contact', href: '/contact' }
   ];
 

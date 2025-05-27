@@ -46,7 +46,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-white overflow-hidden relative">
+    <div className="bg-gradient-to-b from-gray-50 to-white overflow-hidden relative">
       {/* Background elements */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full overflow-hidden"
