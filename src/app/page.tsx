@@ -11,6 +11,8 @@ import TestimonialSection from './components/TestimonialSection'
 import RCMProcess from './components/RCMProcess'
 import FAQSection from './components/FAQSection'
 import CoreValuesSection from './components/CoreValuesSection'
+import OurPartner from './components/OurPartner'
+
 
 
 const page = () => {
@@ -23,9 +25,10 @@ const page = () => {
     <WhyChooseUs  />
     <ServicesSection />
     <RCMProcess />
-    <HIPAAComplianceSection /> 
     <ProcessFlowSection />
-    <TestimonialSection />  
+    <HIPAAComplianceSection /> 
+    <TestimonialSection /> 
+    <OurPartner />  
     <FAQSection />
     <Footer />
     </>

@@ -86,7 +86,7 @@ const WhyChooseUs = () => {
     {
       icon: <FaRegClock className="text-amber-600" />,
       text: "Fast Turnaround",
-      description: "Claims submitted within 24 hours"
+      description: "Claims submitted"
     },
     {
       icon: <FaRegChartBar className="text-red-600" />,
@@ -153,7 +153,7 @@ const WhyChooseUs = () => {
            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               Why Healthcare 
-            </span>  Why Healthcare 
+            </span>
           </h2>
 
           <motion.p
@@ -201,8 +201,8 @@ const WhyChooseUs = () => {
                     <FaChartLine className="text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500">Average</p>
-                    <p className="font-bold text-gray-900">27% Revenue ↑</p>
+                    {/* <p className="text-xs text-gray-500">Average</p> */}
+                    <p className="font-bold text-gray-900">Revenue ↑</p>
                   </div>
                 </div>
               </motion.div>

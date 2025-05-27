@@ -6,7 +6,7 @@ import { IoIosTrendingUp, IoMdRibbon } from 'react-icons/io';
 import {
   RiEye2Fill,
   RiFlag2Fill,
-  RiHandHeartLine,
+  // RiHandHeartLine,
   RiHeart2Fill,
   RiLightbulbFill,
   RiMedalFill,
@@ -26,14 +26,14 @@ const CoreValuesSection = () => {
       description: "Your patients are our priority - we optimize billing so you can focus on care",
       icon: <RiUserHeartLine className="text-red-500" />,
       color: "bg-red-50",
-      testimonial: "Reduced our billing errors by 75% in 3 months"
+      testimonial: "Reduced our billing errors in 3 months"
     },
     {
       title: "Compliance First",
       description: "HIPAA-compliant processes that protect your practice",
       icon: <RiShieldCheckFill className="text-blue-500" />,
       color: "bg-blue-50",
-      testimonial: "Never had a compliance issue in 5+ years"
+      testimonial: "Never had a compliance issue"
     },
     {
       title: "Partnership",
@@ -47,14 +47,14 @@ const CoreValuesSection = () => {
       description: "AI-powered claims processing for faster payments",
       icon: <RiLightbulbFill className="text-purple-500" />,
       color: "bg-purple-50",
-      testimonial: "Cut our payment time from 45 to 18 days"
+      testimonial: "Cut our payment time"
     },
     {
       title: "Revenue Focused",
       description: "Maximizing collections while minimizing your workload",
       icon: <RiMoneyDollarCircleFill className="text-amber-500" />,
       color: "bg-amber-50",
-      testimonial: "Increased our collections by 22% first year"
+      testimonial: "Increased our collections"
     }
   ];
 
@@ -199,12 +199,12 @@ const CoreValuesSection = () => {
                     <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                       To remove the financial burdens of medical practice so you can focus on what matters most - patient care. We combine cutting-edge technology with human expertise to maximize your revenue while minimizing your administrative headaches.
                     </p>
-                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    {/* <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                       <p className="text-blue-700 font-medium flex items-center">
                         <RiHandHeartLine className="mr-2 text-blue-600" />
                         &quot;They reduced our denied claims by 68% in the first quarter&quot; - Dr. Sarah Chen, Family Practice
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </motion.div>
@@ -238,7 +238,7 @@ const CoreValuesSection = () => {
                       We envision a healthcare system where providers spend less time on paperwork and more time with patients. Through intelligent automation and personalized service, we&ldquo;re creating a future where medical practices thrive financially while delivering exceptional care.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-green-50 rounded-lg p-4 border border-green-100">
+                      {/* <div className="bg-green-50 rounded-lg p-4 border border-green-100">
                         <p className="text-green-700 font-medium">
                           &ldquo;Payment time cut from 45 to 12 days&ldquo; - Cardiology Group
                         </p>
@@ -247,7 +247,7 @@ const CoreValuesSection = () => {
                         <p className="text-teal-700 font-medium">
                           &ldquo;98.7% clean claim rate&ldquo; - Pediatric Associates
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
