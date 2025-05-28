@@ -76,7 +76,7 @@ const Footer = () => {
   */
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden border-t border-gray-800">
+    <footer className="bg-gray-900 text-white relative overflow-hidden border-t border-gray-500">
       {/* Animated background elements */}
       <motion.div 
         animate={{
@@ -123,7 +123,7 @@ const Footer = () => {
         </motion.div>
         */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 py-4">
           {/* Company info */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -248,7 +248,13 @@ const Footer = () => {
             </div>
 
             {/* Social */}
-            <div className="pt-4">
+
+
+
+
+
+
+            <div className=" pt-4 flex flex-col items-center space-y-2">
               <div className="flex space-x-4">
                 <motion.a
                   href="#"
@@ -280,6 +286,12 @@ const Footer = () => {
                 </motion.a>
               </div>
             </div>
+
+
+
+
+
+            
           </motion.div>
         </div>
 
@@ -288,7 +300,7 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
+          className="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
         >
           <div>
             © {new Date().getFullYear()} RevenueMed Solutions. All rights reserved.

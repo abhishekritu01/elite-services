@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
       decoration: <IoMdRibbon className="absolute -right-2 -top-2 text-yellow-400 text-2xl" />
     },
     {
-      value: "98%",
+      value: "100%",
       label: "Clean Claims",
       icon: <FaChartLine className="text-white" />,
       bgColor: "bg-green-600",

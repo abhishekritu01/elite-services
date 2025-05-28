@@ -14,6 +14,7 @@ import {
   FaKey,
   FaClipboardCheck
 } from 'react-icons/fa';
+import { IoMdRibbon } from 'react-icons/io';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 
@@ -161,7 +162,11 @@ const HIPAACompliance = () => {
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     HIPAA Compliance
                   </span> <br />
-                  You Can Trust. <span className="text-blue-600">Privacy</span> You Can Count On.
+                  You Can Trust. <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Privacy
+                  </span>
+                  {/* <span className="text-blue-600">Privacy</span> */}
+                   You Can Count On.
                 </motion.h1>
 
                 <motion.p
@@ -184,7 +189,9 @@ const HIPAACompliance = () => {
               >
                 <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-blue-100 opacity-20 blur-xl"></div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 relative z-10">
-                  What Is <span className="text-blue-600">HIPAA</span>?
+                  What Is  
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> HIPAA</span> ?
+                  {/* <span className="text-blue-600">HIPAA</span>? */}
                 </h2>
                 <div className="space-y-6 text-gray-600 relative z-10">
                   <p className="text-lg">
@@ -213,7 +220,8 @@ const HIPAACompliance = () => {
                 className="mb-20"
               >
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-                  The <span className="text-blue-600">Core Purpose</span> of HIPAA
+                  The <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Core Purpose</span> of HIPAA
+                  {/* <span className="text-blue-600">Core Purpose</span>  */}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {hipaaPrinciples.map((principle, index) => (
@@ -381,7 +389,51 @@ const HIPAACompliance = () => {
                   We maintain full HIPAA compliance through rigorous security protocols, regular audits,
                   and continuous staff training. Your data protection is our top priority.
                 </p>
-                <motion.button
+
+
+
+
+ <motion.button
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
+    }}
+    whileTap={{ scale: 0.95 }}
+    className="relative inline-flex items-center px-8 py-4 overflow-hidden border border-transparent md:text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
+  >
+    <span className="absolute inset-0 overflow-hidden">
+      <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
+    </span>
+
+    <span className="relative flex items-center">
+      <span>View Compliance Documentation</span>
+      <motion.span
+        animate={{
+          x: [0, 4, 0],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+        className="ml-3"
+      >
+        <FaFileAlt className="text-xl" />
+      </motion.span>
+    </span>
+
+    <motion.div
+      initial={{ x: -20, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.8 }}
+      className="absolute -right-4 -top-4 text-blue-300 opacity-30 text-6xl"
+    >
+      <IoMdRibbon />
+    </motion.div>
+  </motion.button>
+
+
+                {/* <motion.button
                   whileHover={{
                     scale: 1.05,
                     backgroundColor: "#2563eb"
@@ -391,7 +443,15 @@ const HIPAACompliance = () => {
                 >
                   <FaFileAlt className="mr-2" />
                   View Compliance Documentation
-                </motion.button>
+                </motion.button> */}
+
+
+
+
+
+
+
+                
               </motion.div>
             </div>
           </div>

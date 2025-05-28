@@ -136,7 +136,7 @@ Proven Results
                   <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
                 </span>
 
-                <span className="relative flex items-center">
+               <span className="relative flex items-center">
                   <span>Get a Free Demo</span>
                   <motion.span
                     animate={{ x: [0, 4, 0] }}

@@ -270,14 +270,50 @@ const NavBar = () => {
               </div>
             ))}
 
-            <motion.a
-              href="#contact"
-              className="ml-4 px-4 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 flex items-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaPhoneAlt className="mr-2" /> Contact Us
-            </motion.a>
+
+
+
+<motion.a
+  href="#contact"
+  className="ml-4 px-4 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] text-white text-sm font-medium rounded-md flex items-center shadow-lg hover:shadow-xl transition-all"
+  whileHover={{ 
+    scale: 1.05,
+    transition: { duration: 0.2 }
+  }}
+  whileTap={{ 
+    scale: 0.95,
+    transition: { duration: 0.1 }
+  }}
+  animate={{
+    backgroundPosition: ['0% 50%', '100% 50%'],
+  }}
+  transition={{
+    backgroundPosition: {
+      duration: 3,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "linear"
+    }
+  }}
+>
+  <span className="relative flex items-center">
+    <span>Contact Us</span>
+    <motion.span
+      animate={{ 
+        x: [0, 5, 0],
+        transition: {
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut"
+        }
+      }}
+      className="ml-2"
+    >
+      <FaPhoneAlt className="text-sm" />
+    </motion.span>
+  </span>
+</motion.a>
           </div>
 
           {/* Mobile menu button */}
@@ -362,7 +398,53 @@ const NavBar = () => {
                 </motion.div>
               ))}
 
+
+
               <motion.a
+  href="#contact"
+  className="block w-full mt-4 px-4 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] text-white text-base font-medium rounded-md flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+  variants={navItemVariants}
+  whileHover={{ 
+    scale: 1.02,
+    transition: { duration: 0.2 }
+  }}
+  whileTap={{ 
+    scale: 0.98,
+    transition: { duration: 0.1 }
+  }}
+  animate={{
+    backgroundPosition: ['0% 50%', '100% 50%'],
+  }}
+  transition={{
+    backgroundPosition: {
+      duration: 3,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "linear"
+    }
+  }}
+  onClick={() => setIsOpen(false)}
+>
+  <span className="relative flex items-center">
+    <span>Contact Us</span>
+    <motion.span
+      animate={{ 
+        x: [0, 5, 0],
+        transition: {
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut"
+        }
+      }}
+      className="ml-2"
+    >
+      <FaPhoneAlt className="text-base" />
+    </motion.span>
+  </span>
+</motion.a>
+
+              {/* <motion.a
                 href="#contact"
                 className="block w-full mt-4 px-4 py-3 bg-blue-600 text-white text-base font-medium rounded-md hover:bg-blue-700 flex items-center justify-center"
                 variants={navItemVariants}
@@ -371,7 +453,7 @@ const NavBar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 <FaPhoneAlt className="mr-2" /> Contact Us
-              </motion.a>
+              </motion.a> */}
             </div>
           </motion.div>
         )}

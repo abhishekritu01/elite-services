@@ -13,6 +13,8 @@ import {
   RiMailFill,
   RiMapPin2Fill
 } from 'react-icons/ri';
+import {FaPhoneAlt} from 'react-icons/fa';
+import { IoMdRibbon } from 'react-icons/io';
 import { useState } from 'react';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
@@ -217,12 +219,56 @@ const ContactPage = () => {
                     <div className="text-3xl font-bold text-blue-600 mb-6">
                       1-800-MED-BILL
                     </div>
-                    <a
+
+<motion.a
+    href="tel:18006332455"
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
+    }}
+    whileTap={{ scale: 0.95 }}
+    className="relative inline-flex items-center justify-center px-8 py-4 overflow-hidden border border-transparent md:text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group w-full"
+  >
+    <span className="absolute inset-0 overflow-hidden">
+      <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
+    </span>
+
+    <span className="relative flex items-center">
+      <span>Call Now</span>
+      <motion.span
+        animate={{
+          x: [0, 4, 0],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+        className="ml-3"
+      >
+        <FaPhoneAlt className="text-xl" />
+      </motion.span>
+    </span>
+
+    <motion.div
+      initial={{ x: -20, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.8 }}
+      className="absolute -right-4 -top-4 text-blue-300 opacity-30 text-6xl"
+    >
+      <IoMdRibbon />
+    </motion.div>
+  </motion.a>
+                    {/* <a
                       href="tel:18006332455"
                       className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 w-full"
                     >
                       Call Now
-                    </a>
+                    </a> */}
+
+
+
+
                   </div>
                 )}
               </div>
