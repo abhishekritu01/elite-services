@@ -172,7 +172,7 @@ const TrustIndicators = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 relative overflow-hidden">
+    <div className="bg-white py-16 md:py-24 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 

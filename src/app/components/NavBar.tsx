@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { FaBars, FaPhoneAlt, FaTimes } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
 import Link from 'next/link';
+import { FaFileInvoiceDollar, FaChartLine, FaUserMd } from 'react-icons/fa';
 
 interface DropdownItem {
   icon: React.ReactNode;
@@ -44,15 +45,15 @@ const NavBar = () => {
   const navLinks: NavLink[] = [
     { name: 'Home', href: '/' },
      { name: 'About', href: '/about' },
-    // { 
-    //   name: 'Services', 
-    //   href: '#services',
-    //   dropdown: [
-    //     { icon: <FaFileInvoiceDollar />, name: 'Medical Billing', desc: 'End-to-end billing solutions' },
-    //     { icon: <FaChartLine />, name: 'Revenue Cycle', desc: 'Optimize your revenue flow' },
-    //     { icon: <FaUserMd />, name: 'Provider Solutions', desc: 'Tailored for practitioners' }
-    //   ]
-    // },
+    { 
+      name: 'Services', 
+      href: '#services',
+      dropdown: [
+        { icon: <FaFileInvoiceDollar />, name: 'Credentialing', desc: 'End-to-end billing solutions' },
+        { icon: <FaChartLine />, name: 'Revenue Cycle', desc: 'Optimize your revenue flow' },
+        { icon: <FaUserMd />, name: 'Provider Solutions', desc: 'Tailored for practitioners' }
+      ]
+    },
     { name: 'Services', href: '/services' },
     { name: 'HIPAA', href: '/hippa' },
     { name: 'Contact', href: '/contact' },

@@ -86,7 +86,7 @@ const CareerSection = () => {
                             <motion.p
                                 variants={fadeInUp}
                                 className="mt-8 text-lg font-medium text-gray-600 sm:text-xl"
-                            >Behind our success is a team of driven, passionate, and innovative professionals. If you're looking to build a meaningful career in a fast-growing, technology-driven industry, we want to hear from you.
+                            >Behind our success is a team of driven, passionate, and innovative professionals. If you&apos;re looking to build a meaningful career in a fast-growing, technology-driven industry, we want to hear from you.
                             </motion.p>
                             <motion.div
                                 variants={fadeInUp}

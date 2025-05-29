@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState } from 'react';
+import { FaBriefcase } from 'react-icons/fa';
 import Footer from '@/app/components/Footer';
 import NavBar from '@/app/components/NavBar';
 
@@ -93,30 +94,69 @@ const ApplyPage = () => {
 
     return (
         <>
-        <NavBar />
-        <div className="bg-white">
-            
-            <div className="relative isolate px-6 pt-14 lg:px-8">
-                <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 animate-gradient-flow"
-                >
-                </div>
+            <NavBar />
+            <div className="bg-white">
 
-                <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-28 animate-fade-in-up">
-                    <div className="text-center">
-                        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                            Current Job <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Opportunities</span>
-                        </h1>
-                        <p className="mt-6 text-lg font-medium text-gray-600 sm:text-xl animate-fade-in">
-                            No Open Positions Currently
-We don't have any open positions at the moment, but we're always looking for talented individuals to join our team.
-
-STAY CONNECTED FOR FUTURE OPPORTUNITIES
-                        </p>
+                <div className="relative isolate px-6 pt-14 lg:px-8">
+                    <div
+                        aria-hidden="true"
+                        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 animate-gradient-flow"
+                    >
                     </div>
 
-                    {/* <div className="mt-12 space-y-10">
+                    <div className="mx-auto max-w-2xl py-10 sm:py-30 lg:py-28 animate-fade-in-up">
+
+
+
+
+                        <div className="flex flex-col p-8 max-w-6xl mx-auto text-center">
+                            {/* Briefcase icon above heading */}
+                            <div className="flex flex-col items-center justify-center mb-6">
+                                <FaBriefcase className="text-5xl sm:text-6xl text-blue-500 mb-4" />
+                                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                                    Current Job <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Opportunities</span>
+                                </h1>
+                            </div>
+
+                            {/* Centered content below */}
+                            <div className="text-center">
+                                <div className="space-y-4 text-gray-600 max-w-xl mx-auto">
+                                    <p className="text-lg font-medium sm:text-xl">
+                                        No Open Positions Currently
+                                    </p>
+                                    <p className="text-base sm:text-lg">
+                                        We don&apos;t have any open positions at the moment, but we&apos;re always looking for talented individuals to join our team.
+                                    </p>
+                                    <p className="text-lg font-semibold text-blue-600 sm:text-xl">
+                                        STAY CONNECTED FOR FUTURE OPPORTUNITIES
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                        {/* <div className="text-center">
+                            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                                Current Job <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Opportunities</span>
+                            </h1>
+                            <p className="mt-6 text-lg font-medium text-gray-600 sm:text-xl animate-fade-in">
+                                No Open Positions Currently
+                                We don't have any open positions at the moment, but we're always looking for talented individuals to join our team.
+
+                                STAY CONNECTED FOR FUTURE OPPORTUNITIES
+                            </p>
+                        </div> */}
+
+                        {/* <div className="mt-12 space-y-10">
                         {currentJobs.map((job) => (
                             <div
                                 key={job.id}
@@ -174,114 +214,114 @@ STAY CONNECTED FOR FUTURE OPPORTUNITIES
                         </div>
                     </div> */}
 
-                    <p className="mt-12 text-center text-sm text-gray-600">
-                        Don’t see a position that fits you?{' '}
-                        {/* <Link href="/" className="font-medium text-primary">
+                        {/* <p className="mt-12 text-center text-sm text-gray-600">
+                            Don’t see a position that fits you?{' '}
+                            <Link href="/" className="font-medium text-primary">
                             Send a message
-                        </Link>{' '} */}
-                        to share your interest.
-                    </p>
-                </div>
-            </div>
-
-            {showModal && selectedJob && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-500 bg-opacity-75">
-                    <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-10/12 md:w-3/4 p-6 sm:p-8">
-                        <div className="flex flex-col sm:flex-row">
-                            <div className="w-full sm:w-1/2 sm:pr-4">
-                                <h2 className="text-xl sm:text-2xl font-semibold">{selectedJob.title}</h2>
-                                <p className="mt-2 text-gray-700">{selectedJob.description}</p>
-                                <p className="mt-4">
-                                    <strong>Location:</strong> {selectedJob.location}
-                                </p>
-                                <p>
-                                    <strong>Type:</strong> {selectedJob.type}
-                                </p>
-                                <p>
-                                    <strong>Tech Stack:</strong> {selectedJob.techStack}
-                                </p>
-                                <p>
-                                    <strong>Salary:</strong> {selectedJob.salary}
-                                </p>
-                                <p>
-                                    <strong>Experience:</strong> {selectedJob.experience}
-                                </p>
-                            </div>
-
-                            <div className="w-full sm:w-1/2 sm:pl-4 mt-6 sm:mt-0">
-                                <h3 className="text-lg sm:text-xl font-medium mb-4">
-                                    Apply for {selectedJob.title}
-                                </h3>
-                                <form className="space-y-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            Full Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="w-full p-3 border rounded-md"
-                                            placeholder="Your full name"
-                                            required
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            Email Address
-                                        </label>
-                                        <input
-                                            type="email"
-                                            className="w-full p-3 border rounded-md"
-                                            placeholder="Your email"
-                                            required
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            Phone Number
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="w-full p-3 border rounded-md"
-                                            placeholder="Your phone number"
-                                            required
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700">
-                                            Upload Resume
-                                        </label>
-                                        <input
-                                            type="file"
-                                            className="w-full p-3 border rounded-md"
-                                            required
-                                        />
-                                    </div>
-                                    <div className="mt-4 flex justify-end">
-                                        <button
-                                            type="submit"
-                                            className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-md"
-                                        >
-                                            Submit Application
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <button
-                            onClick={handleCloseModal}
-                            className="absolute top-4 sm:top-6 right-6 mt-4 md:right-52 md:mt-20 sm:right-6 text-4xl sm:text-4xl font-semibold text-primary"
-                        >
-                            &times;
-                        </button>
+                        </Link>{' '}
+                            to share your interest.
+                        </p> */}
                     </div>
                 </div>
 
+                {showModal && selectedJob && (
+                    <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-500 bg-opacity-75">
+                        <div className="bg-white rounded-lg shadow-xl w-11/12 sm:w-10/12 md:w-3/4 p-6 sm:p-8">
+                            <div className="flex flex-col sm:flex-row">
+                                <div className="w-full sm:w-1/2 sm:pr-4">
+                                    <h2 className="text-xl sm:text-2xl font-semibold">{selectedJob.title}</h2>
+                                    <p className="mt-2 text-gray-700">{selectedJob.description}</p>
+                                    <p className="mt-4">
+                                        <strong>Location:</strong> {selectedJob.location}
+                                    </p>
+                                    <p>
+                                        <strong>Type:</strong> {selectedJob.type}
+                                    </p>
+                                    <p>
+                                        <strong>Tech Stack:</strong> {selectedJob.techStack}
+                                    </p>
+                                    <p>
+                                        <strong>Salary:</strong> {selectedJob.salary}
+                                    </p>
+                                    <p>
+                                        <strong>Experience:</strong> {selectedJob.experience}
+                                    </p>
+                                </div>
 
-            )}
-        </div>
-        <Footer />
+                                <div className="w-full sm:w-1/2 sm:pl-4 mt-6 sm:mt-0">
+                                    <h3 className="text-lg sm:text-xl font-medium mb-4">
+                                        Apply for {selectedJob.title}
+                                    </h3>
+                                    <form className="space-y-4">
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700">
+                                                Full Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="w-full p-3 border rounded-md"
+                                                placeholder="Your full name"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700">
+                                                Email Address
+                                            </label>
+                                            <input
+                                                type="email"
+                                                className="w-full p-3 border rounded-md"
+                                                placeholder="Your email"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700">
+                                                Phone Number
+                                            </label>
+                                            <input
+                                                type="text"
+                                                className="w-full p-3 border rounded-md"
+                                                placeholder="Your phone number"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700">
+                                                Upload Resume
+                                            </label>
+                                            <input
+                                                type="file"
+                                                className="w-full p-3 border rounded-md"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="mt-4 flex justify-end">
+                                            <button
+                                                type="submit"
+                                                className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-md"
+                                            >
+                                                Submit Application
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <button
+                                onClick={handleCloseModal}
+                                className="absolute top-4 sm:top-6 right-6 mt-4 md:right-52 md:mt-20 sm:right-6 text-4xl sm:text-4xl font-semibold text-primary"
+                            >
+                                &times;
+                            </button>
+                        </div>
+                    </div>
+
+
+                )}
+            </div>
+            <Footer />
         </>
-        
+
     )
 }
 
