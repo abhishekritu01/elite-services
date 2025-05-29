@@ -72,7 +72,7 @@ const Page = () => {
           className="text-center mb-16"
         >
           <motion.div 
-            className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-700 mb-6"
+            className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-700 mb-6 mt-6"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2 }}
