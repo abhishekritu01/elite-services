@@ -134,7 +134,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <IoMdRibbon className="text-blue-400 text-3xl" />
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-                RevenueMed
+                SiniMeds
               </span>
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -303,7 +303,7 @@ const Footer = () => {
           className="py-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
         >
           <div>
-            © {new Date().getFullYear()} RevenueMed Solutions. All rights reserved.
+            © {new Date().getFullYear()} SiniMeds Solutions. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>

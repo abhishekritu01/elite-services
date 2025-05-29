@@ -1,205 +1,205 @@
-'use client';
-import { motion } from "framer-motion";
-// import { FaMapMarkedAlt, FaLaptop, FaHeadset, FaBolt } from "react-icons/fa";
-import Image from "next/image";
+// 'use client';
+// import { motion } from "framer-motion";
+// // import { FaMapMarkedAlt, FaLaptop, FaHeadset, FaBolt } from "react-icons/fa";
+// import Image from "next/image";
 
-const cabrilloContent = {
-  name: "Cabrillo Coastal",
-  website: "https://www.cabgen.com/",
-  logo: "/Cabrillo-Coastal1.png",
-  about: `Any insurance company can offer residential property insurance to people living in coastal areas, but it's tougher to find one that's committed to excellent service and specializes in hurricane-exposed property. That's what sets us apart from other insurance providers.
+// const cabrilloContent = {
+//   name: "Cabrillo Coastal",
+//   website: "https://www.cabgen.com/",
+//   logo: "/Cabrillo-Coastal1.png",
+//   about: `Any insurance company can offer residential property insurance to people living in coastal areas, but it's tougher to find one that's committed to excellent service and specializes in hurricane-exposed property. That's what sets us apart from other insurance providers.
 
-Through sophisticated pricing techniques, quality and timely claims handling, careful reinsurance pricing, experienced underwriting and a friendly staff, Cabrillo Coastal provides the quality service and competitive pricing our customers deserve.
-`,
+// Through sophisticated pricing techniques, quality and timely claims handling, careful reinsurance pricing, experienced underwriting and a friendly staff, Cabrillo Coastal provides the quality service and competitive pricing our customers deserve.
+// `,
 
-  otherPatners: [
-    {
-      image: "/US  costal Insurance logo.jpeg",
-      description:
-        "US Coastal Insurance, offers specialized homeowners insurance for coastal properties with a focus on reliability and expertise. Backed by Cabrillo Coastal, it combines strong claims service with over 150 years of industry experience.",
-    },
-    {
-      image: "/Harbor claims.jpeg",
-      description:
-        "Harbor Claims, LLC, is a Florida based claims management firm specializing in timely, equitable, and ethical resolution of property and casualty insurance claims. Representing insurers like US Coastal and Safe Harbor, Harbor Claims emphasizes prompt communication and fair handling to support policyholders during loss events.",
-    },
-    {
-      image: "/Us Costal Property logo.jpeg",
-      description:
-        "US Coastal Property & Casualty Insurance Company, is a Florida based insurer specializing in homeowners insurance for coastal properties. Administered by Cabrillo Coastal, it boasts over 150 years of combined industry experience and holds an A, Exceptional Financial Stability Rating from Demotech.",
-    },
-    {
-      image: "/Safe harbor logo.jpeg",
-      description:
-        "Safe Harbor Insurance Company, is a Florida based insurer specializing in homeowners coverage for coastal properties, offering tailored protection against risks like hurricanes and flooding. Administered by Cabrillo Coastal and supported by Harbor Claims.",
-    },
-    {
-      image: "/Orange Insurance exchange logo.jpeg",
-      description:
-        "Orange Insurance Exchange, is a Florida based, member-owned reciprocal insurer offering tailored homeowners, flood, and commercial property coverage. Established in 2023, Orange partners with Cabrillo Coastal and Harbor Claims to deliver responsive service and holds an A Excellent rating from Demotech.",
-    },
-  ],
-};
+//   otherPatners: [
+//     {
+//       image: "/US  costal Insurance logo.jpeg",
+//       description:
+//         "US Coastal Insurance, offers specialized homeowners insurance for coastal properties with a focus on reliability and expertise. Backed by Cabrillo Coastal, it combines strong claims service with over 150 years of industry experience.",
+//     },
+//     {
+//       image: "/Harbor claims.jpeg",
+//       description:
+//         "Harbor Claims, LLC, is a Florida based claims management firm specializing in timely, equitable, and ethical resolution of property and casualty insurance claims. Representing insurers like US Coastal and Safe Harbor, Harbor Claims emphasizes prompt communication and fair handling to support policyholders during loss events.",
+//     },
+//     {
+//       image: "/Us Costal Property logo.jpeg",
+//       description:
+//         "US Coastal Property & Casualty Insurance Company, is a Florida based insurer specializing in homeowners insurance for coastal properties. Administered by Cabrillo Coastal, it boasts over 150 years of combined industry experience and holds an A, Exceptional Financial Stability Rating from Demotech.",
+//     },
+//     {
+//       image: "/Safe harbor logo.jpeg",
+//       description:
+//         "Safe Harbor Insurance Company, is a Florida based insurer specializing in homeowners coverage for coastal properties, offering tailored protection against risks like hurricanes and flooding. Administered by Cabrillo Coastal and supported by Harbor Claims.",
+//     },
+//     {
+//       image: "/Orange Insurance exchange logo.jpeg",
+//       description:
+//         "Orange Insurance Exchange, is a Florida based, member-owned reciprocal insurer offering tailored homeowners, flood, and commercial property coverage. Established in 2023, Orange partners with Cabrillo Coastal and Harbor Claims to deliver responsive service and holds an A Excellent rating from Demotech.",
+//     },
+//   ],
+// };
 
-const OurPartner = () => {
-  return (
-    <section id="projects" className="py-20 bg-gradient-to-t from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-extrabold text-gray-900">
-  Our{' '}
-  <motion.span
-    animate={{
-      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-    }}
-    transition={{
-      duration: 10,
-      repeat: Infinity,
-      ease: 'linear',
-    }}
-    className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto]"
-  >
-    Trusted Partner
-  </motion.span>
-</h2>
-          <p className="mt-4 text-lg text-gray-700">
-            Cabrillo Coastal General Insurance Agency is dedicated to providing reliable Home Insurance services in high-risk coastal regions.
-          </p>
-        </motion.div>
+// const OurPartner = () => {
+//   return (
+//     <section id="projects" className="py-20 bg-gradient-to-t from-gray-50 to-white">
+//       <div className="max-w-7xl mx-auto px-6">
+//         {/* Header */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           viewport={{ once: true }}
+//           className="text-center mb-16"
+//         >
+//           <h2 className="text-4xl font-extrabold text-gray-900">
+//   Our{' '}
+//   <motion.span
+//     animate={{
+//       backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+//     }}
+//     transition={{
+//       duration: 10,
+//       repeat: Infinity,
+//       ease: 'linear',
+//     }}
+//     className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto]"
+//   >
+//     Trusted Partner
+//   </motion.span>
+// </h2>
+//           <p className="mt-4 text-lg text-gray-700">
+//             Cabrillo Coastal General Insurance Agency is dedicated to providing reliable Home Insurance services in high-risk coastal regions.
+//           </p>
+//         </motion.div>
 
-        {/* Partner Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-blue-500"
-        >
-          {/* Logo & About */}
-          <div className="p-8 text-center">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="inline-block mb-6"
-            >
-              <Image
-                src={cabrilloContent.logo}
-                alt={`${cabrilloContent.name} logo`}
-                width={280}
-                height={120}
-                className="mx-auto"
-              />
-            </motion.div>
+//         {/* Partner Card */}
+//         <motion.div
+//           initial={{ opacity: 0, scale: 0.98 }}
+//           whileInView={{ opacity: 1, scale: 1 }}
+//           transition={{ duration: 0.6 }}
+//           className="bg-white rounded-2xl shadow-xl overflow-hidden border-b-4 border-blue-500"
+//         >
+//           {/* Logo & About */}
+//           <div className="p-8 text-center">
+//             <motion.div
+//               whileHover={{ scale: 1.05 }}
+//               className="inline-block mb-6"
+//             >
+//               <Image
+//                 src={cabrilloContent.logo}
+//                 alt={`${cabrilloContent.name} logo`}
+//                 width={280}
+//                 height={120}
+//                 className="mx-auto"
+//               />
+//             </motion.div>
 
-            <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto whitespace-pre-line">
-              {cabrilloContent.about}
-            </p>
+//             <p className="text-gray-600 leading-relaxed max-w-4xl mx-auto whitespace-pre-line">
+//               {cabrilloContent.about}
+//             </p>
             
-            {/* Partner Logos Grid */}
+//             {/* Partner Logos Grid */}
 
 
 
 
 
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10 mb-6 px-4">
-            {cabrilloContent.otherPatners.map((partner, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="h-50 perspective-1000"
-              >
-                <motion.div
-                  whileHover={{ rotateY: 180 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative w-full h-full preserve-3d"
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  {/* Front Side (Image) */}
-                  <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden"
-                    style={{ backfaceVisibility: "hidden" }}>
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={partner.image}
-                        alt={`Logo of partner ${index + 1}`}
-                        fill
-                        className="object-contain p-4"
-                      />
-                    </div>
-                  </div>
+// <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10 mb-6 px-4">
+//             {cabrilloContent.otherPatners.map((partner, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0, y: 20 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 transition={{ duration: 0.5, delay: index * 0.1 }}
+//                 viewport={{ once: true }}
+//                 className="h-50 perspective-1000"
+//               >
+//                 <motion.div
+//                   whileHover={{ rotateY: 180 }}
+//                   transition={{ duration: 0.6 }}
+//                   className="relative w-full h-full preserve-3d"
+//                   style={{ transformStyle: "preserve-3d" }}
+//                 >
+//                   {/* Front Side (Image) */}
+//                   <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden"
+//                     style={{ backfaceVisibility: "hidden" }}>
+//                     <div className="relative w-full h-full">
+//                       <Image
+//                         src={partner.image}
+//                         alt={`Logo of partner ${index + 1}`}
+//                         fill
+//                         className="object-contain p-4"
+//                       />
+//                     </div>
+//                   </div>
 
-                  {/* Back Side (Description) */}
-                  <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-md p-4 overflow-hidden flex items-center"
-                    style={{
-                      backfaceVisibility: "hidden",
-                      transform: "rotateY(180deg)"
-                    }}>
-                    <p className="text-gray-600 text-xs">
-                      {partner.description}
-                    </p>
-                  </div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-
-
+//                   {/* Back Side (Description) */}
+//                   <div className="absolute w-full h-full backface-hidden bg-white rounded-xl shadow-md p-4 overflow-hidden flex items-center"
+//                     style={{
+//                       backfaceVisibility: "hidden",
+//                       transform: "rotateY(180deg)"
+//                     }}>
+//                     <p className="text-gray-600 text-xs">
+//                       {partner.description}
+//                     </p>
+//                   </div>
+//                 </motion.div>
+//               </motion.div>
+//             ))}
+//           </div>
 
 
 
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-10 mb-6">
-              {cabrilloContent.otherPatners.map((partner, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                  className="bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:border-transparent transition-all"
-                >
-                  <div className="relative w-full h-40 mb-3">
-                    <Image
-                      src={partner.image}
-                      alt={`Logo of partner ${index + 1}`}
-                      fill 
-                      className="object-fill h-40"
-                    />
-                  </div>
-                  <p className="text-gray-600 text-xs">
-                    {partner.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div> */}
 
 
-            <motion.a
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.98 }}
-  href={cabrilloContent.website}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-8 inline-block px-6 py-3 rounded-full font-medium shadow-md text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] bg-[0%_50%] animate-gradient"
->
-  Visit Website →
-</motion.a>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+//             {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-10 mb-6">
+//               {cabrilloContent.otherPatners.map((partner, index) => (
+//                 <motion.div
+//                   key={index}
+//                   initial={{ opacity: 0, y: 20 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   transition={{ duration: 0.5, delay: index * 0.1 }}
+//                   viewport={{ once: true }}
+//                   whileHover={{ y: -5 }}
+//                   className="bg-white p-4 rounded-xl shadow-md border border-gray-100 hover:border-transparent transition-all"
+//                 >
+//                   <div className="relative w-full h-40 mb-3">
+//                     <Image
+//                       src={partner.image}
+//                       alt={`Logo of partner ${index + 1}`}
+//                       fill 
+//                       className="object-fill h-40"
+//                     />
+//                   </div>
+//                   <p className="text-gray-600 text-xs">
+//                     {partner.description}
+//                   </p>
+//                 </motion.div>
+//               ))}
+//             </div> */}
 
-export default OurPartner;
+
+//             <motion.a
+//   whileHover={{ scale: 1.05 }}
+//   whileTap={{ scale: 0.98 }}
+//   href={cabrilloContent.website}
+//   target="_blank"
+//   rel="noopener noreferrer"
+//   className="mt-8 inline-block px-6 py-3 rounded-full font-medium shadow-md text-white bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] bg-[0%_50%] animate-gradient"
+// >
+//   Visit Website →
+// </motion.a>
+//           </div>
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default OurPartner;
 
 
 

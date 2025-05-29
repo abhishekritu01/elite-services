@@ -55,7 +55,8 @@ const NavBar = () => {
     // },
     { name: 'Services', href: '/services' },
     { name: 'HIPAA', href: '/hippa' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+    {name: 'Career', href: '/career'}
   ];
 
   // Animation variants
