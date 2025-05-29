@@ -11,7 +11,8 @@ import TestimonialSection from './components/TestimonialSection'
 import RCMProcess from './components/RCMProcess'
 import FAQSection from './components/FAQSection'
 import CoreValuesSection from './components/CoreValuesSection'
-// import OurPartner from './components/OurPartner'
+
+import AIBillingBenefits from './components/AIBillingBenefits'
 
 
 
@@ -21,6 +22,7 @@ const page = () => {
     <>
     <NavBar />
     <HeroSection />
+    <AIBillingBenefits />
     <TrustIndicators />
     <CoreValuesSection />
     <WhyChooseUs  />
