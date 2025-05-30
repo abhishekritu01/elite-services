@@ -50,21 +50,21 @@ const HIPAAComplianceSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-blue-50 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-b from-gray-50 to-blue-50 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-14"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-4">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-3">
             <RiAlertFill className="mr-2" />
             <span className="font-medium">COMPLIANCE</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               HIPAA Compliance
             </span> You Can Trust
@@ -74,7 +74,7 @@ const HIPAAComplianceSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -82,7 +82,7 @@ const HIPAAComplianceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-xl shadow-lg p-8 h-full border-l-4 border-blue-500">
+            <div className="bg-white rounded-xl shadow-md h-full p-6 md:p-7 border-l-4 border-blue-500">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <RiFileShieldFill className="text-blue-500 mr-3 text-3xl" />
                 What Is HIPAA?
@@ -153,7 +153,7 @@ const HIPAAComplianceSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-xl shadow-lg p-8 h-full border-l-4 border-green-500">
+            <div className="bg-white rounded-xl shadow-md p-6 md:p-7 border-l-4 border-green-500">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <RiShieldKeyholeFill className="text-green-500 mr-3 text-3xl" />
                 Our Security Framework
@@ -164,7 +164,7 @@ const HIPAAComplianceSection = () => {
                   <motion.div
                     key={index}
                     whileHover={{ y: -5 }}
-                    className="bg-gray-50 rounded-lg p-5 border border-gray-200 hover:border-blue-200 transition-all"
+                    className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-200 transition-all"
                   >
                     <div className="text-3xl mb-3">
                       {feature.icon}
@@ -211,14 +211,14 @@ const HIPAAComplianceSection = () => {
             </div>
           </motion.div>
         </div>
-        <div className="text-center mt-12">
+        <div className="text-center mt-10">
           <motion.button
             whileHover={{
               scale: 1.05,
               boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="relative inline-flex items-center px-8 py-4 overflow-hidden border border-transparent md:text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
+            className="relative inline-flex items-center px-8 py-4 overflow-hidden border border-transparent md:text-base font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
           >
             <span className="absolute inset-0 overflow-hidden">
               <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
@@ -250,7 +250,7 @@ const HIPAAComplianceSection = () => {
               <IoMdRibbon />
             </motion.div>
           </motion.button>
-          <p className="text-gray-500 mt-4 text-sm">
+          <p className="text-gray-500 mt-3 text-sm">
             All our systems meet or exceed HIPAA security requirements
           </p>
         </div>

@@ -60,7 +60,7 @@ const NavBar = () => {
     },
     // { name: 'Services', href: '/services' },
     { name: 'HIPAA', href: '/hippa' },
-    { name: 'Contact', href: '/contact' },
+    // { name: 'Contact', href: '/contact' },
     { name: 'Career', href: '/career' }
   ];
 
@@ -259,6 +259,7 @@ const NavBar = () => {
                               <motion.div
                                 className="flex items-start px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 group cursor-pointer"
                                 whileHover={{ x: 5 }}
+                                transition={{ delay: 0.05 * i }}
                               >
                                 <span className="text-blue-500 mr-3 mt-0.5">{item.icon}</span>
                                 <div>
@@ -278,10 +279,11 @@ const NavBar = () => {
 
 
 
-
-            <motion.a
-              href="#contact"
+<Link href="/contact" passHref>
+            <motion.div
+              // href="#contact"
               className="ml-4 px-4 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] text-white text-sm font-medium rounded-md flex items-center shadow-lg hover:shadow-xl transition-all"
+              style={{ minWidth: '120px', minHeight: '44px' }}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 }
@@ -319,7 +321,8 @@ const NavBar = () => {
                   <FaPhoneAlt className="text-sm" />
                 </motion.span>
               </span>
-            </motion.a>
+            </motion.div>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -343,7 +346,7 @@ const NavBar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden fixed inset-0 bg-white z-40 mt-[70px] h-[calc(100vh-70px)] overflow-y-auto"
+            className="md:hidden fixed inset-x-0 bg-white z-40 top-[70px] h-[calc(100vh-70px)] overflow-y-auto"
             variants={mobileMenuVariants}
             initial="closed"
             animate="open"
@@ -383,6 +386,7 @@ const NavBar = () => {
                                 <motion.div
                                   className="block px-4 py-3 text-base font-medium text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-600 flex items-start cursor-pointer"
                                   whileHover={{ x: 5 }}
+                                  transition={{ delay: 0.05 * i }}
                                 >
                                   <span className="text-blue-500 mr-3 mt-0.5">{item.icon}</span>
                                   <div>
@@ -434,10 +438,11 @@ const NavBar = () => {
               ))}
 
 
-
-              <motion.a
-                href="#contact"
-                className="block w-full mt-4 px-6 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600  text-white text-lg font-medium rounded-lg flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+<Link href="/contact" passHref>
+              <motion.div
+                // href="#contact"
+                className="block w-full mt-4 px-6 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600  text-white text-lg font-medium rounded-lg flex items-center justify-center shadow-lg hover:shadow-xl transition-all active:scale-95 active:shadow-inner"
+                style={{ minHeight: '60px' }} 
                 variants={navItemVariants}
                 whileHover={{
                   scale: 1.02,
@@ -477,7 +482,8 @@ const NavBar = () => {
                     <FaPhoneAlt className="text-lg" />
                   </motion.span>
                 </span>
-              </motion.a>
+              </motion.div>
+              </Link>
 
               {/* <motion.a
                 href="#contact"

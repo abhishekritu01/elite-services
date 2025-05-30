@@ -18,6 +18,7 @@ import {
   RiTwitterFill
 } from 'react-icons/ri';
 import { IoMdRibbon } from 'react-icons/io';
+import Link from 'next/link';
 import { useEffect, useRef} from 'react';
 
 const Footer = () => {
@@ -91,7 +92,7 @@ const Footer = () => {
         className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-transparent"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
         {/* Performance metrics */}
         {/*
         <motion.div 
@@ -123,15 +124,15 @@ const Footer = () => {
         </motion.div>
         */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
           {/* Company info */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="space-y-6"
+            className="space-y-4"
           >
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
               <IoMdRibbon className="text-blue-400 text-3xl" />
               <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
                 SiniMeds
@@ -142,7 +143,7 @@ const Footer = () => {
             </p>
 
             {/* Trust badges */}
-            <div className="flex flex-wrap gap-3 pt-4">
+            <div className="flex flex-wrap gap-2 pt-2">
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 className="flex items-center space-x-2 px-3 py-2 bg-gray-800 rounded-full"
@@ -165,12 +166,12 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="space-y-6"
+            className="space-y-4"
           >
             <h3 className="text-sm font-semibold tracking-wider text-blue-300 uppercase">
               Get In Touch
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-start space-x-4">
                 <FaPhoneAlt className="text-blue-400 mt-1 flex-shrink-0" />
                 <div>
@@ -212,7 +213,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold tracking-wider text-blue-300 uppercase">
               Quick Links
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               <motion.a
                 whileHover={{ x: 5 }}
                 href="#"
@@ -237,14 +238,16 @@ const Footer = () => {
                 <RiArrowRightUpLine className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span>Compliance</span>
               </motion.a>
-              <motion.a
+              <motion.div
                 whileHover={{ x: 5 }}
-                href="#"
                 className="flex items-center text-gray-400 hover:text-white transition-colors group"
               >
+                <Link href='/career' className="flex items-center">
                 <RiArrowRightUpLine className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span>Careers</span>
-              </motion.a>
+                </Link>
+                
+              </motion.div>
             </div>
 
             {/* Social */}
@@ -254,8 +257,8 @@ const Footer = () => {
 
 
 
-            <div className=" pt-4 flex flex-col items-center space-y-2">
-              <div className="flex space-x-4">
+            <div className=" pt-2 flex flex-col items-center md:items-start space-y-2">
+              <div className="flex space-x-3">
                 <motion.a
                   href="#"
                   whileHover={{ y: -3 }}
@@ -286,13 +289,7 @@ const Footer = () => {
                 </motion.a>
               </div>
             </div>
-
-
-
-
-
-            
-          </motion.div>
+</motion.div>
         </div>
 
         {/* Bottom footer */}
@@ -305,10 +302,10 @@ const Footer = () => {
           <div>
             © {new Date().getFullYear()} SiniMeds Solutions. All rights reserved.
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">HIPAA</a>
+            {/* <a href="#" className="hover:text-gray-300 transition-colors">HIPAA</a> */}
           </div>
         </motion.div>
       </div>

@@ -1019,7 +1019,7 @@ const HeroSection = () => {
                 src="/rcm.mp4"
                 autoPlay
                 muted
-                loop
+                // loop
                 playsInline
               /> 
               {/* Video overlay elements */}

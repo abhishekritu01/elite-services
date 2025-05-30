@@ -56,7 +56,7 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
@@ -86,14 +86,14 @@ const TestimonialSection = () => {
         />
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative">
         {/* Header with floating badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 relative"
+          className="text-center mb-12 md:mb-14 relative"
         >
           <div className="absolute -top-8 left-1/2 -translate-x-1/2 flex space-x-2">
             {[1, 2, 3, 4, 5].map((star) => (
@@ -113,7 +113,7 @@ const TestimonialSection = () => {
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
             transition={{ type: "spring" }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-4 relative overflow-hidden"
+            className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-100 text-blue-600 mb-3 relative overflow-hidden"
           >
             <motion.div 
               animate={{
@@ -134,7 +134,7 @@ const TestimonialSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-3"
           >
             <motion.span
               animate={{
@@ -155,14 +155,14 @@ const TestimonialSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            className="text-lg md:text-lg text-gray-600 max-w-3xl mx-auto"
           >
             See how we&ldquo;ve helped practices and hospitals of all sizes streamline revenue cycles and increase collections
           </motion.p>
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -182,7 +182,7 @@ const TestimonialSection = () => {
                   y: -10,
                   boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
                 }}
-                className="bg-white rounded-xl shadow-md p-8 h-full border border-gray-100 hover:border-blue-200 transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-xl shadow-md p-6 h-full border border-gray-100 hover:border-blue-200 transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-16 h-16 bg-blue-50 rounded-bl-full flex items-start justify-end p-2">
                   {testimonial.icon}
@@ -252,7 +252,7 @@ const TestimonialSection = () => {
               boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="relative inline-flex items-center px-8 py-4 overflow-hidden border border-transparent text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
+            className="relative inline-flex items-center px-6 py-3 md:px-7 md:py-3.5 overflow-hidden border border-transparent text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg group"
           >
             <span className="absolute inset-0 overflow-hidden">
               <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />

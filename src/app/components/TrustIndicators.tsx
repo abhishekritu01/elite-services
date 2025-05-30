@@ -2,12 +2,12 @@
 
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import {
-  FaChevronRight,
-  FaClinicMedical,
-  FaHospital,
-  FaUserMd
-} from 'react-icons/fa';
+// import {
+//   FaChevronRight,
+//   FaClinicMedical,
+//   FaHospital,
+//   FaUserMd
+// } from 'react-icons/fa';
 import {
   IoIosTrendingUp,
   IoMdRibbon
@@ -15,19 +15,20 @@ import {
 import {
   RiLineChartLine,
   RiMapPin2Fill,
-  RiMedalFill,
+  // RiMedalFill,
   RiShieldCheckFill,
   RiStarFill,
   RiTimerFlashFill,
   RiUserHeartLine
 } from 'react-icons/ri';
+import { MdLocalHospital } from "react-icons/md";
 
 const TrustIndicators = () => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [countStarted, setCountStarted] = useState(false);
-  const [hoveredClient, setHoveredClient] = useState<number | null>(null);
+  // const [hoveredClient, setHoveredClient] = useState<number | null>(null);
   const [hoveredStat, setHoveredStat] = useState<number | null>(null);
 
   useEffect(() => {
@@ -37,45 +38,45 @@ const TrustIndicators = () => {
     }
   }, [controls, isInView]);
 
-  const clients = [
-    { 
-      name: "HealthPlus Clinic", 
-      icon: <FaClinicMedical className="text-blue-500" />,
-      description: "Reduced claim denials by 40% with our RCM solutions",
-      achievements: [
-        "40% fewer denials",
-        "28% faster payments",
-        "98% clean claim rate"
-      ]
-    },
-    { 
-      name: "City Medical Center", 
-      icon: <FaHospital className="text-green-500" />,
-      description: "Achieved 98% clean claim rate in just 3 months",
-      achievements: [
-        "98% claim accuracy",
-        "15 day AR reduction",
-        "Full compliance"
-      ]
-    },
-    { 
-      name: "Advanced Care Physicians", 
-      icon: <FaUserMd className="text-purple-500" />,
-      description: "Reduced payment turnaround from 45 to 15 days",
-      achievements: [
-        "65% faster payments",
-        "30% revenue increase",
-        "24/7 support"
-      ]
-    }
-  ];
+  // const clients = [
+  //   { 
+  //     name: "HealthPlus Clinic", 
+  //     icon: <FaClinicMedical className="text-blue-500" />,
+  //     description: "Reduced claim denials by 40% with our RCM solutions",
+  //     achievements: [
+  //       "40% fewer denials",
+  //       "28% faster payments",
+  //       "98% clean claim rate"
+  //     ]
+  //   },
+  //   { 
+  //     name: "City Medical Center", 
+  //     icon: <FaHospital className="text-green-500" />,
+  //     description: "Achieved 98% clean claim rate in just 3 months",
+  //     achievements: [
+  //       "98% claim accuracy",
+  //       "15 day AR reduction",
+  //       "Full compliance"
+  //     ]
+  //   },
+  //   { 
+  //     name: "Advanced Care Physicians", 
+  //     icon: <FaUserMd className="text-purple-500" />,
+  //     description: "Reduced payment turnaround from 45 to 15 days",
+  //     achievements: [
+  //       "65% faster payments",
+  //       "30% revenue increase",
+  //       "24/7 support"
+  //     ]
+  //   }
+  // ];
 
   const stats = [
     { 
       value: 100, 
       suffix: "%", 
       label: "Claim Accuracy", 
-      icon: <RiShieldCheckFill className="text-blue-500" />,
+      icon: <RiShieldCheckFill className="text-blue-500 text-4xl" />,
       color: "text-blue-600",
       bgColor: "bg-blue-50",
       duration: 800,
@@ -86,7 +87,7 @@ const TrustIndicators = () => {
       value: 27, 
       suffix: "%", 
       label: "Revenue Increase", 
-      icon: <RiLineChartLine className="text-green-500 text -4xl" />,
+      icon: <RiLineChartLine className="text-green-500 text-6xl" />,
       color: "text-green-600",
       bgColor: "bg-green-50",
       duration: 600,
@@ -99,7 +100,7 @@ const TrustIndicators = () => {
       value: 15, 
       suffix: "Days", 
       label: "Payment Time Frame", 
-      icon: <RiTimerFlashFill className="text-purple-500 text -4xl" />,
+      icon: <RiTimerFlashFill className="text-purple-500 text-6xl" />,
       color: "text-purple-600",
       bgColor: "bg-purple-50",
       duration: 500,
@@ -111,7 +112,7 @@ const TrustIndicators = () => {
       value: 50, 
       suffix: "States", 
       label: "Nationwide Coverage", 
-      icon: <RiMapPin2Fill className="text-amber-500" />,
+      icon: <RiMapPin2Fill className="text-amber-500 text-4xl" />,
       color: "text-amber-600",
       bgColor: "bg-amber-50",
       duration: 400,
@@ -276,9 +277,37 @@ const TrustIndicators = () => {
             Serving medical practices and hospitals across all 50 states with proven revenue cycle solutions
           </motion.p>
         </motion.div>
-
-        {/* Interactive Client Cards */}
-        <motion.div
+<motion.div
+                        className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+                        initial={{ scale: 0.98 }}
+                        animate={{ scale: 1 }}
+                      >
+                        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                        <div className="flex flex-col lg:flex-row items-center">
+                          <motion.div
+                            animate={{
+                              rotate: [0, 10, -10, 0],
+                              y: [0, -10, 0]
+                            }}
+                            transition={{
+                              duration: 8,
+                              repeat: Infinity,
+                              repeatType: "reverse"
+                            }}
+                            className="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center mb-8 lg:mb-0 lg:mr-12 shadow-inner"
+                          >
+                            <MdLocalHospital className="text-red-600 text-5xl" />
+                          </motion.div>
+                          <div className="flex-1">
+                            {/* <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3> */}
+                            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                              We handle all types of medical billing under one roof. Whether you&lsquo;re a clinic, hospital, private practice, individual physician, or part of a specialty group, and more. From general care to advanced services, we&apos;ve got your billing covered.
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+ {/* Interactive Client Cards */}
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -368,12 +397,12 @@ const TrustIndicators = () => {
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Stats Grid */}
        <motion.div
         ref={ref}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 mt-6"
       >
         {stats.map((stat, index) => (
           <motion.div
