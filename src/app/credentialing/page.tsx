@@ -117,8 +117,8 @@ const Page = () => {
               <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-blue-100 opacity-20 blur-xl"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">Why Credentialing Matters</h3>
               <p className="text-gray-600 mb-6 relative z-10">
-                Each provider must navigate a complex web of applications, verifications, and approvals before they can bill insurance. 
-                With varying requirements across hundreds of payors, this process often delays revenue by 3-6 months.
+                Credentialing is the first step to getting paid. Providers must be verified by each payor before billing can begin a complex, often delayed process that can stall revenue for 3 to 6 months. 
+                SiniMeds simplifies credentialing, helping providers become billable faster, reduce delays, and stay compliant with every payor&apos;s requirements.
               </p>
               <div className="space-y-4 relative z-10">
                 <div className="flex items-start">
@@ -128,7 +128,7 @@ const Page = () => {
                     </div>
                   </div>
                   <p className="ml-3 text-gray-600">
-                    <span className="font-semibold text-gray-900">The Challenge:</span> Manual processes, inconsistent requirements, and endless follow-ups
+                    <span className="font-semibold text-gray-900">The Challenge:</span> Credentialing is complex and essential. Inconsistent requirements across payors and manual processes often delay billing and disrupt operational efficiency.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -138,7 +138,7 @@ const Page = () => {
                     </div>
                   </div>
                   <p className="ml-3 text-gray-600">
-                    <span className="font-semibold text-gray-900">Our Solution:</span> Proprietary software + 20 years of expertise = 60% faster enrollments
+                    <span className="font-semibold text-gray-900">Our Solution:</span> SiniMeds combines AI-driven tools with expert oversight to streamline credentialing and enrollment. From applications to approvals, we manage every step balancing automation with hands-on precision to ensure compliance and help providers start billing faster.
                   </p>
                 </div>
               </div>
@@ -156,7 +156,10 @@ const Page = () => {
                       <FaCalendarAlt className="text-white text-xs" />
                     </div>
                   </div>
-                  <span className="ml-3">Average 45-day enrollment turnaround (vs. 90-180 days industry standard)</span>
+                  <p>
+<span className="ml-3">Hybrid Expertise (AI + Human Touch):</span> We combine advanced AI-driven tools with expert human oversight to ensure accuracy, speed, and compliance in every credentialing task.
+                  </p>
+                  
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
@@ -164,7 +167,9 @@ const Page = () => {
                       <FaFileAlt className="text-white text-xs" />
                     </div>
                   </div>
-                  <span className="ml-3">98% first-time submission acceptance rate</span>
+                  <p>
+<span className="ml-3">Faster Turnaround Times:</span> Our streamlined processes help providers get credentialed quickly and start billing without unnecessary delays.
+                  </p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
@@ -172,7 +177,19 @@ const Page = () => {
                       <FaSyncAlt className="text-white text-xs" />
                     </div>
                   </div>
-                  <span className="ml-3">Automated renewal tracking prevents credentialing lapses</span>
+                  <p>
+<span className="ml-3">Complete Transparency:</span>Stay informed at every step with automated updates and easy-to-access reports. No guesswork, no hidden steps.
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                      <FaSyncAlt className="text-white text-xs" />
+                    </div>
+                  </div>
+                  <p>
+<span className="ml-3">Dedicated Team:</span>Our experienced team works as your behind-the-scenes partner, focused on your success, accuracy, and peace of mind.
+                  </p>
                 </li>
               </ul>
             </div>

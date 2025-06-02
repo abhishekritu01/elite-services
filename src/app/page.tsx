@@ -25,7 +25,7 @@ const page = () => {
     <AIBillingBenefits />
     <TrustIndicators />
     <CoreValuesSection />
-    <WhyChooseUs  />
+    <WhyChooseUs />
     <ServicesSection />
     <RCMProcess />
     <ProcessFlowSection />

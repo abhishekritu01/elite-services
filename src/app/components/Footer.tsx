@@ -214,14 +214,16 @@ const Footer = () => {
               Quick Links
             </h3>
             <div className="grid grid-cols-2 gap-3">
-              <motion.a
-                whileHover={{ x: 5 }}
-                href="#"
-                className="flex items-center text-gray-400 hover:text-white transition-colors group"
-              >
-                <RiArrowRightUpLine className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <span>Case Studies</span>
-              </motion.a>
+              <motion.div whileHover={{ x: 5 }}>
+  <Link
+    href="/casestudies"
+    className="flex items-center text-gray-400 hover:text-white transition-colors group"
+  >
+    <RiArrowRightUpLine className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+    <span>Case Studies</span>
+  </Link>
+</motion.div>
+              
               <motion.a
                 whileHover={{ x: 5 }}
                 href="#"
@@ -303,7 +305,7 @@ const Footer = () => {
             © {new Date().getFullYear()} SiniMeds Solutions. All rights reserved.
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+            <a href="/policy" className="hover:text-gray-300 transition-colors">Privacy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
             {/* <a href="#" className="hover:text-gray-300 transition-colors">HIPAA</a> */}
           </div>
