@@ -4,13 +4,24 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { IoMdRibbon } from 'react-icons/io';
 import { MdContactPhone } from "react-icons/md";
+// import {
+//   RiArrowDownSLine,
+//   RiChatSmileLine,
+//   RiHospitalLine,
+//   RiMoneyDollarCircleLine,
+//   RiQuestionLine,
+//   RiShieldCheckLine
+// } from 'react-icons/ri';
+
 import {
   RiArrowDownSLine,
-  RiChatSmileLine,
-  RiHospitalLine,
-  RiMoneyDollarCircleLine,
+  RiFileList3Line,
+ RiTimeLine ,
+  RiDashboardLine,
+  RiBarChartLine,
   RiQuestionLine,
-  RiShieldCheckLine
+  RiSparklingLine ,
+  RiLoginCircleLine
 } from 'react-icons/ri';
 
 const FAQSection = () => {
@@ -18,29 +29,40 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "How much does medical billing outsourcing cost?",
-      answer: "We offer flexible pricing options to fit your practice size. Most clients save 30-50% compared to in-house billing teams.",
-      icon: <RiMoneyDollarCircleLine className="text-blue-500 text-xl" />
+      question: "What does a medical billing company do?",
+      answer: "We help healthcare providers get paid by preparing and submitting claims to insurance companies, and following up until the payments are received.",
+      // icon: <RiMoneyDollarCircleLine className="text-blue-500 text-xl" />
+      icon: <RiFileList3Line className="text-blue-500 text-xl" />
     },
     {
-      question: "Do you work with my EHR/EMR system?",
-      answer: "Yes! We integrate with all major systems including Epic, Cerner, and Athenahealth. Our team handles the technical setup for you.",
-      icon: <RiHospitalLine className="text-green-500 text-xl" />
+      question: "Why do I need a billing service?",
+      answer: "Medical billing is time-consuming and complicated. We take care of it for you, so you can focus on treating patients, not paperwork.",
+      // icon: <RiHospitalLine className="text-green-500 text-xl" />
+      icon: <RiTimeLine className="text-green-500 text-xl" />
     },
     {
-      question: "How quickly will I see improvements?",
-      answer: "Most practices see measurable results within 30-60 days, including faster payments and fewer denied claims.",
-      icon: <RiShieldCheckLine className="text-purple-500 text-xl" />
+      question: "Will I still have control over my billing?",
+      answer: "Absolutely! You’ll have full visibility and regular updates on your claims and payments. We work as your partner, not in place of you.",
+      // icon: <RiShieldCheckLine className="text-purple-500 text-xl" />
+      icon: <RiDashboardLine className="text-purple-500 text-xl" />
     },
     {
-      question: "Is my patient data secure?",
-      answer: "Absolutely. We use enterprise-grade security and strict HIPAA compliance protocols to protect all sensitive information.",
-      icon: <RiShieldCheckLine className="text-amber-500 text-xl" />
+      question: "How do I know if my claims are being paid correctly?",
+      answer: "We provide clear, regular reports showing what’s been billed, what’s been paid, and any follow-ups needed.",
+      // icon: <RiShieldCheckLine className="text-amber-500 text-xl" />
+       icon: <RiBarChartLine className="text-amber-500 text-xl" />
     },
     {
-      question: "What's your onboarding process like?",
-      answer: "We make transition easy with a dedicated specialist who guides you through each step with no disruption to your workflow.",
-      icon: <RiChatSmileLine className="text-teal-500 text-xl" />
+      question: "What makes SiniMeds different?",
+      answer: "We blend advanced technology with personal support. Our use of AI speeds things up, but our human experts make sure nothing gets missed.",
+      // icon: <RiChatSmileLine className="text-teal-500 text-xl" />
+      icon: <RiSparklingLine className="text-teal-500 text-xl" />
+    },
+    {
+      question: "How do I get started?",
+      answer: "It’s easy! Just contact us, and we’ll walk you through a simple onboarding process to get your billing up and running quickly.",
+      // icon: <RiChatSmileLine className="text-teal-500 text-xl" />
+      icon: <RiLoginCircleLine className="text-teal-500 text-xl" />
     }
   ];
 

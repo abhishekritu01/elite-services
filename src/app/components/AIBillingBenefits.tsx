@@ -35,7 +35,7 @@ const AIBillingBenefits = () => {
       icon: FaShieldAlt,
       title: "Precision Coding",
       description: "Ensures flawless coding, decreasing claim rejections and delays.",
-      stats: "95% coding accuracy",
+      stats: "100% coding accuracy",
       color: "bg-purple-500"
     },
     {

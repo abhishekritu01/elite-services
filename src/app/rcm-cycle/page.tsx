@@ -494,7 +494,7 @@ const Page = () => {
 
     const stats = [
         { value: "30-50%", label: "Faster Payments", icon: <FaClock className="text-blue-500" /> },
-        { value: "95%+", label: "Clean Claim Rate", icon: <FaFileInvoiceDollar className="text-purple-500" /> },
+        { value: "100%", label: "Clean Claim Rate", icon: <FaFileInvoiceDollar className="text-purple-500" /> },
         { value: "40-60%", label: "Reduced Denials", icon: <FaExchangeAlt className="text-blue-600" /> },
         { value: "15-25%", label: "Revenue Increase", icon: <GiCash className="text-blue-400" /> }
     ]

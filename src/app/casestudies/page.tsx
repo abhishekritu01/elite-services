@@ -30,7 +30,7 @@ const CaseStudiesSection = () => {
       solution: "We provided end-to-end billing support, including claim submission, follow-up, and denial management. We also trained her office staff and introduced an easy-to-use billing software integrated with her practice management system.",
       result: "The practice became more organized, with fewer billing issues and better control over cash flow. Dr. Lee was able to focus more on her patients, with confidence that her billing was in expert hands.",
       stats: [
-        { value: "95%", label: "Claims Resolved" },
+        { value: "100%", label: "Claims Resolved" },
         { value: "30%", label: "Revenue Increase" }
       ]
     }
