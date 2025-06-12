@@ -468,6 +468,20 @@ import {
     FaShieldAlt,
     FaUserCheck
 } from 'react-icons/fa'
+import {
+  RiUserAddFill,
+  RiVerifiedBadgeFill,
+  RiContactsBook2Fill,
+  RiFileShield2Fill,
+  RiStethoscopeFill,
+  RiSendPlaneFill,
+  RiBugFill,
+  RiMoneyDollarCircleFill,
+  RiToolsFill,
+  RiFolderShield2Fill,
+  RiExchangeFundsFill,
+  RiMessage2Fill
+} from "react-icons/ri";
 import { FaFile } from 'react-icons/fa6'
 import { GiCash, GiHealthNormal } from 'react-icons/gi'
 import { IoMdRibbon } from 'react-icons/io'
@@ -491,6 +505,7 @@ const Page = () => {
 
     const y = useTransform(scrollYProgress, [0, 1], [0, 100])
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.2])
+    const [hoveredBenefit, setHoveredBenefit] = useState<number | null>(null);
 
     const stats = [
         { value: "30-50%", label: "Faster Payments", icon: <FaClock className="text-blue-500" /> },
@@ -498,6 +513,70 @@ const Page = () => {
         { value: "40-60%", label: "Reduced Denials", icon: <FaExchangeAlt className="text-blue-600" /> },
         { value: "15-25%", label: "Revenue Increase", icon: <GiCash className="text-blue-400" /> }
     ]
+
+    const benefits = [
+        {
+          title: "1. Patient Registration",
+          description: "AI-powered forms collect patient details with speed and precision, reducing manual entry errors. But every submission is reviewed by trained staff to ensure it’s complete, accurate, and fully compliant.",
+          icon: <RiUserAddFill className="text-sky-600" />
+        },
+        {
+          title: "2. Eligibility & Benefits Verification",
+          description: "Real-time insurance checks are run by AI tools connected to payer databases. They flag discrepancies, check co-pays, and spot authorization needs instantly. Our team follows up, explains benefits to patients, and clears the path for care.",
+          icon: <RiVerifiedBadgeFill className="text-emerald-600" />
+        },
+        {
+          title: "3. Data Entry & Patient Demographics",
+          description: "Machine learning tools populate demographic and insurance fields with accuracy. Yet, our billing professionals double-check for nuance — especially in complex payer scenarios — to avoid downstream errors.",
+          icon: <RiContactsBook2Fill className="text-indigo-600" />
+        },
+        {
+          title: "4. Referral & Authorization",
+          description: "AI tracks payer rules and alerts staff to required referrals or authorizations. Our team handles the paperwork, contacts referring physicians, and ensures approvals are in place — before the patient even arrives.",
+          icon: <RiFileShield2Fill className="text-yellow-600" />
+        },
+        {
+          title: "5. Coding & Billing",
+          description: "AI suggests medical codes from documentation using natural language processing. Certified coders then review, adjust, and finalize based on payer-specific rules and clinical accuracy.",
+          icon: <RiStethoscopeFill className="text-blue-600" />
+        },
+        {
+          title: "6. Claim Submission",
+          description: "Automation scrubs claims for common errors and submits them electronically. Meanwhile, our specialists review edge cases, resolve exceptions, and track every batch for timely delivery.",
+          icon: <RiSendPlaneFill className="text-green-600" />
+        },
+        {
+          title: "7. Clearinghouse Denials",
+          description: "AI flags denial reasons and suggests corrections. Our billing team verifies the cause, makes necessary adjustments, and resubmits promptly to keep revenue flowing.",
+           icon: <RiBugFill className="text-orange-500" />
+        },
+        {
+          title: "8. Payment Posting",
+          description: "Intelligent systems auto-match payments with claims using EOBs. For mismatches, partial payments, or unusual cases, our experts step in to investigate and resolve.",
+           icon: <RiMoneyDollarCircleFill className="text-lime-600" />
+        },
+         {
+          title: "9. Denial Management",
+          description: "Denied or rejected claims are reviewed, corrected, and resubmitted. Root cause analysis is done to minimize repeat denials.",
+          icon: <RiToolsFill className="text-teal-600" />
+        },
+        {
+          title: "Appeal Procedure",
+          description: "If a claim is incorrectly denied, an appeal is prepared and submitted with supporting documentation to contest the payer’s decision.",
+          icon: <RiFolderShield2Fill className="text-orange-600" />
+        },
+        {
+          title: "11. Secondary Filing",
+          description: "AI routes secondary claims once primary processing is complete. Human oversight ensures correct policy application, accurate balances, and proper coordination of benefits.",
+          icon: <RiExchangeFundsFill className="text-violet-600" />
+        },
+        {
+          title: "12. Patient Billing",
+          description: "AI generates easy-to-understand statements and sends automated reminders through multiple channels. Our support team is always available for one-on-one assistance, guiding patients with empathy and clarity.",
+          icon: <RiMessage2Fill className="text-cyan-600" />
+        }
+        
+      ];
 
     const features = [
         {
@@ -654,6 +733,85 @@ const Page = () => {
                                     ))}
                                 </div>
                             </motion.div>
+
+                            {/* Benefits Section */}
+                                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                                      <div className="text-center mb-16">
+                                        <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                                          Our Full
+                                          <motion.span
+                                                          animate={{
+                                                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                                                          }} transition={{
+                                                            duration: 10,
+                                                            repeat: Infinity,
+                                                            ease: "linear"
+                                                          }}
+                                                          className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto]"
+                                                        >  Revenue Cycle Management (RCM)</motion.span>
+                                        </h2>
+                                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                                          Driven by AI. Refined by Human Expertise.
+                                        </p>
+                                      </div>
+                            
+                                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        {benefits.map((benefit, index) => (
+                                          <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: index * 0.1 }}
+                                            onHoverStart={() => setHoveredBenefit(index)}
+                                            onHoverEnd={() => setHoveredBenefit(null)}
+                                            className={`p-6 rounded-xl border-2 transition-all ${hoveredBenefit === index
+                                              ? 'border-blue-500 bg-blue-50 shadow-lg'
+                                              : 'border-gray-200 bg-white'
+                                              }`}
+                                          >
+                                            <div className="flex items-start">
+                                              <motion.div
+                                                animate={{
+                                                  scale: hoveredBenefit === index ? 1.1 : 1,
+                                                  rotate: hoveredBenefit === index ? 5 : 0
+                                                }}
+                                                className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4"
+                                              >
+                                                {benefit.icon}
+                                              </motion.div>
+                                              <div>
+                                                <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                                                <p className="text-gray-600">{benefit.description}</p>
+                                              </div>
+                                            </div>
+                                          </motion.div>
+                                        ))}
+                                      </div>
+                            
+                                      {/* <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        {[
+                                          "Dedicated Account Managers",
+                                          "Custom Workflow Integrations",
+                                          "Scalable Solutions",
+                                          "Flexible Engagement Models",
+                                          "Real-Time Dashboards",
+                                          "Proactive Denial Prevention"
+                                        ].map((item, index) => (
+                                          <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.1 + index * 0.05 }}
+                                            className="flex items-center bg-gray-50 px-4 py-3 rounded-lg"
+                                          >
+                                            <RiCheckboxCircleFill className="text-green-500 mr-3" />
+                                            <span className="text-gray-700">{item}</span>
+                                          </motion.div>
+                                        ))}
+                                      </div> */}
+                                    </div>
 
                             {/* Main Content */}
                             <div className="mb-20">

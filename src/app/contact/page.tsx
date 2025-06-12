@@ -217,7 +217,7 @@ const ContactPage = () => {
                       Available Monday-Friday, 8am-8pm EST
                     </p>
                     <div className="text-3xl font-bold text-blue-600 mb-6">
-                      1-800-MED-BILL
+                      +91 97419 09007
                     </div>
 
 <motion.a
@@ -233,7 +233,7 @@ const ContactPage = () => {
       <span className="absolute -inset-8 bg-gradient-to-r from-white/30 via-white/50 to-white/30 opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:-inset-4" />
     </span>
 
-    <span className="relative flex items-center">
+    <a href="tel:+919741909007" className="relative flex items-center">
       <span>Call Now</span>
       <motion.span
         animate={{
@@ -248,7 +248,7 @@ const ContactPage = () => {
       >
         <FaPhoneAlt className="text-xl" />
       </motion.span>
-    </span>
+    </a>
 
     <motion.div
       initial={{ x: -20, opacity: 0 }}
@@ -324,17 +324,18 @@ const ContactPage = () => {
                   <div className="flex items-start">
                     <RiMapPin2Fill className="text-gray-500 mt-1 mr-3" />
                     <p className="text-gray-600">
-                      123 Medical Drive, Suite 400<br />
-                      Boston, MA 02115
+                      Dakshina Murthy Towers, No 59, Devanooru, <br />
+                      Rajiv Nagar 2nd Stage, R.S.Naidu Nagar, <br />
+                      Mysuru, Karnataka 570019
                     </p>
                   </div>
                   <div className="flex items-center">
                     <RiPhoneFill className="text-gray-500 mr-3" />
-                    <p className="text-gray-600">1-800-MED-BILL</p>
+                    <p className="text-gray-600">+91 97419 09007</p>
                   </div>
                   <div className="flex items-center">
                     <RiMailFill className="text-gray-500 mr-3" />
-                    <p className="text-gray-600">support@medbillsolutions.com</p>
+                    <p className="text-gray-600">info@sinimeds.com</p>
                   </div>
                 </div>
               </div>

@@ -177,7 +177,7 @@ const ServicesSection = () => {
               <motion.div
                 initial={false}
                 animate={{
-                  height: activeCard === key ? 'auto' : '180px',
+                  height: activeCard === key ? 'auto' : '225px',
                   transition: { type: "spring", damping: 25, stiffness: 100 }
                 }}
                 className={`bg-white rounded-xl shadow-lg overflow-hidden border ${activeCard === key ? 'border-blue-500' : 'border-gray-200'
