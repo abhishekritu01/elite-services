@@ -189,11 +189,11 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                {/* <FaMapMarkerAlt className="text-blue-400 mt-1 flex-shrink-0" /> */}
-                {/* <div>
+                <FaMapMarkerAlt className="text-blue-400 mt-1 flex-shrink-0" />
+                <div>
                   <p className="text-gray-400 text-sm">Headquarter</p>
-                  <p className="text-white font-medium">Boston, MA • Austin, TX</p>
-                </div> */}
+                  <p className="text-white font-medium">Idea Gateway Inc, New York , USA</p>
+                </div>
               </div>
               <div className="flex items-start space-x-4">
                 <FaMapMarkerAlt className="text-blue-400 mt-1 flex-shrink-0" />

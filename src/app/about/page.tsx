@@ -167,24 +167,26 @@ const Page = () => {
                     transition={{ delay: 0.3 }}
                     className="md:w-1/2"
                   >
-                    <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
+                    {/* <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg"> */}
+                      <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
                       <Image
-                        src="/about/office.jpg"
+                        src="/Our story.jpg"
                         alt="Our office"
                         layout="fill"
                         objectFit="cover"
+                        className="object-cover"
                       />
                     </div>
                   </motion.div>
 
-                  <div className="md:w-1/2">
+                  <div className="md:w-1/2 ">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">About Us:</h2>
                     <p className="text-gray-600 mb-6">
                       At RCM, we believe billing should never be a barrier to delivering exceptional patient care. Founded and led by physicians who understand the realities of modern healthcare, our mission is to remove the financial and administrative friction that keeps providers from doing what they do best caring for patients.
-Headquartered in ___ with a regional office in India, Mysore. We partner with healthcare organizations of all sizes across the U.S., from solo practices to large group facilities. We deliver smart, seamless, end-to-end revenue cycle solutions that ensure consistent, optimized cash flow.
+Headquartered in Idea Gateway Inc, New York , USA with a regional office in Mysore, India. We partner with healthcare organizations of all sizes across the U.S., from solo practices to large group facilities. We deliver smart, seamless, end-to-end revenue cycle solutions that ensure consistent, optimized cash flow.
                     </p>
-                    <p className="text-gray-600">
-                      We&apos;re more than a billing service. We’re a team of clinically minded professionals, financial strategists, and technology specialists, all working together to help practices not just survive but thrive.
+                    <p className="text-gray-600 mb-4">
+                      We&apos;re more than a billing service. We&apos;re a team of clinically minded professionals, financial strategists, and technology specialists, all working together to help practices not just survive but thrive.
                     </p>
                     <p className="text-gray-600">
                      At RCM, you&apos;re not outsourcing to a generic vendor. You&apos;re aligning with a team that speaks your language, shares your priorities, and is committed to protecting the business side of your practice.
@@ -235,7 +237,7 @@ Headquartered in ___ with a regional office in India, Mysore. We partner with he
                   >
                     <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                       <Image
-                        src="/about/mission.jpg"
+                        src="/Mission.png"
                         alt="Our mission"
                         layout="fill"
                         objectFit="cover"
