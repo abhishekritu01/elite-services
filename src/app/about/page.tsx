@@ -235,7 +235,8 @@ Headquartered in Idea Gateway Inc, New York , USA with a regional office in Myso
                     transition={{ delay: 0.3 }}
                     className="md:w-1/2 order-1 md:order-2"
                   >
-                    <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                    {/* <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg"> */}
+                     <div className="relative w-full h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden">
                       <Image
                         src="/Mission.png"
                         alt="Our mission"

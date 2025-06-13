@@ -177,7 +177,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Sales & Support</p>
                   {/* <p className="text-white font-medium">+91 97419 09007</p> */}
-                  <a href="tel:+919741909007" className="text-white font-medium hover:underline hover:text-blue-500">+91 97419 09007</a>
+                  <a href="tel:+919741909007" className="text-white font-medium hover:text-blue-500">+91 97419 09007</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -185,7 +185,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Email Us</p>
                   {/* <p className="text-white font-medium">info@sinimeds.com</p> */}
-                  <a href="mailto:info@sinimeds.com" className="text-white font-medium hover:underline hover:text-blue-500">info@sinimeds.com</a>
+                  <a href="mailto:info@sinimeds.com" className="text-white font-medium hover:text-blue-500">info@sinimeds.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
