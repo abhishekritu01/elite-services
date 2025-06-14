@@ -1,6 +1,7 @@
 'use client';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import {
   FaChartLine,
@@ -313,6 +314,7 @@ const WhyChooseUs = () => {
             {/* CTA with shine effect */}
             <div className='flex justify-center'>
               <div className="mt-6 flex flex-col w-84 justify-center space-x-4">
+                <Link href="/contact">
                 <motion.button
                   whileHover={{
                     scale: 1.05,
@@ -352,6 +354,7 @@ const WhyChooseUs = () => {
                   </motion.div>
 
                 </motion.button>
+                </Link>
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}

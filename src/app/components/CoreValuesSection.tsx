@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import Link from 'next/link';
 import { IoIosTrendingUp, IoMdRibbon } from 'react-icons/io';
 import {
   RiEye2Fill,
@@ -26,7 +27,7 @@ const CoreValuesSection = () => {
       description: "Your patients are our priority - we optimize billing so you can focus on care",
       icon: <RiUserHeartLine className="text-red-500" />,
       color: "bg-red-50",
-      testimonial: "Reduced our billing errors in 3 months"
+      testimonial: "Reduce your billing errors"
     },
     {
       title: "Compliance First",
@@ -40,21 +41,21 @@ const CoreValuesSection = () => {
       description: "We're an extension of your team, not just a vendor",
       icon: <RiTeamFill className="text-green-500" />,
       color: "bg-green-50",
-      testimonial: "Their team feels like our own billing department"
+      testimonial: "Our team feels like your own billing department"
     },
     {
       title: "Innovation",
       description: "AI-powered claims processing for faster payments",
       icon: <RiLightbulbFill className="text-purple-500" />,
       color: "bg-purple-50",
-      testimonial: "Cut our payment time"
+      testimonial: "Cut your payment time"
     },
     {
       title: "Revenue Focused",
       description: "Maximizing collections while minimizing your workload",
       icon: <RiMoneyDollarCircleFill className="text-amber-500" />,
       color: "bg-amber-50",
-      testimonial: "Increased our collections"
+      testimonial: "Increases your collections"
     }
   ];
 
@@ -197,7 +198,7 @@ const CoreValuesSection = () => {
                   <div className="flex-1">
                     <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
                     <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                      To remove the financial burdens of medical practice so you can focus on what matters most - patient care. We combine cutting-edge technology with human expertise to maximize your revenue while minimizing your administrative headaches.
+                      To remove the financial burdens of medical practice so you can focus on what matters most - patient care. We combine cutting-edge technology with human expertise to maximize your revenue while minimizing your administrative workload.
                     </p>
                     {/* <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                       <p className="text-blue-700 font-medium flex items-center">
@@ -339,6 +340,7 @@ const CoreValuesSection = () => {
           className="text-center mt-20"
         >
           <div className="mt-6 flex justify-center space-x-4">
+            <Link href="/contact">
             <motion.button
               whileHover={{
                 scale: 1.05,
@@ -377,6 +379,7 @@ const CoreValuesSection = () => {
                 <IoMdRibbon />
               </motion.div>
             </motion.button>
+            </Link>
           </div>
 
         </motion.div>

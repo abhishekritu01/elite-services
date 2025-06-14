@@ -158,6 +158,13 @@ const Footer = () => {
                 <FaShieldAlt className="text-blue-400" />
                 <span className="text-xs font-medium">HIPAA Compliant</span>
               </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="flex items-center space-x-2 px-3 py-2 bg-gray-800 rounded-full"
+              >
+                <RiMedal2Fill className="text-blue-400" />
+                <span className="text-xs font-medium">Six Sigma Certification</span>
+              </motion.div>
             </div>
           </motion.div>
 

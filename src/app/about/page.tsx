@@ -21,10 +21,10 @@ const Page = () => {
   const [hoveredBenefit, setHoveredBenefit] = useState<number | null>(null);
 
   const stats = [
-    { value: "15+", label: "Years Experience", icon: <RiHistoryFill className="text-blue-500" /> },
+    { value: "14+", label: "Years Experience", icon: <RiHistoryFill className="text-blue-500" /> },
     { value: "200+", label: "Certified Professionals", icon: <RiTeamFill className="text-green-500" /> },
     { value: "98%", label: "Client Retention", icon: <RiUserHeartLine className="text-purple-500" /> },
-    { value: "24-48h", label: "Claim Turnaround", icon: <RiLineChartLine className="text-amber-500" /> }
+    { value: "24-48h", label: "Faster Turnaround", icon: <RiLineChartLine className="text-amber-500" /> }
   ];
 
   const benefits = [

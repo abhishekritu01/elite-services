@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import Link from 'next/link';
 import { IoMdRibbon } from 'react-icons/io';
 import { MdContactPhone } from "react-icons/md";
 // import {
@@ -141,6 +142,7 @@ const FAQSection = () => {
             Contact Our Support Team
             <RiArrowDownSLine className="ml-2 transform rotate-90" />
           </button> */}
+          <Link href="/contact">
 
           <motion.button
             whileHover={{
@@ -180,6 +182,7 @@ const FAQSection = () => {
               <IoMdRibbon />
             </motion.div>
           </motion.button>
+          </Link>
         </div>
       </div>
     </div>

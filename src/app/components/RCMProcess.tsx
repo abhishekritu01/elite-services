@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { IoIosTrendingUp } from 'react-icons/io';
 import { IoMdRibbon } from 'react-icons/io';
+import Link from 'next/link';
 
 const SimpleRCMOverview = () => {
   return (
@@ -66,6 +67,7 @@ const SimpleRCMOverview = () => {
             Learn More About RCM
           </button> */}
           <div className="mt-6 flex justify-center space-x-4">
+            <Link href="/rcm-cycle">
             <motion.button
               whileHover={{
                 scale: 1.05,
@@ -104,6 +106,7 @@ const SimpleRCMOverview = () => {
                 <IoMdRibbon />
               </motion.div>
             </motion.button>
+            </Link>
           </div>
 
 

@@ -1,10 +1,11 @@
 'use client';
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { BsGraphUpArrow } from 'react-icons/bs';
 import {
   FaArrowRight,
-  FaChevronRight,
+  // FaChevronRight,
   FaFileInvoice,
   FaHandHoldingUsd,
   FaMobileAlt,
@@ -444,7 +445,7 @@ const ServicesPage = () => {
           {service.title === "Telehealth Billing" && "Practices offering remote care or hybrid services"}
           {service.title === "AR Recovery" && "Practices with high outstanding receivables or unresolved denials"}
         </p>
-        <motion.button
+        {/* <motion.button
           whileHover={{ 
             scale: 1.05,
             boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
@@ -453,7 +454,7 @@ const ServicesPage = () => {
           className={`mt-4 px-4 py-2 text-white rounded-lg text-sm font-medium flex items-center transition-all ${service.color.replace('from-', 'bg-gradient-to-r from-')}`}
         >
           Learn more <FaChevronRight className="ml-1" />
-        </motion.button>
+        </motion.button> */}
       </div>
     </motion.div>
   )}
@@ -478,7 +479,7 @@ const ServicesPage = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "98%", label: "Clean Claim Rate" },
+              { value: "100%", label: "Clean Claim Rate" },
               { value: "40%", label: "Faster Payments" },
               { value: "85%", label: "Denial Recovery" },
               { value: "100%", label: "HIPAA Compliance" }
@@ -567,6 +568,7 @@ const ServicesPage = () => {
 >
   Get Your Free Consultation <IoMdRocket className="ml-2" />
 </motion.button>
+<Link href="/casestudies">
  <motion.button
                 whileHover={{ 
                   scale: 1.05,
@@ -578,6 +580,7 @@ const ServicesPage = () => {
               >
                 See Case Studies <FaArrowRight className="ml-2" />
               </motion.button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>

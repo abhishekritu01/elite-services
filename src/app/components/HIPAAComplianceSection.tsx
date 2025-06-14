@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import { RiShieldKeyholeFill, RiLockPasswordFill, RiFileShieldFill, RiHealthBookFill, RiAlertFill } from 'react-icons/ri';
 import { FaUserShield, FaClipboardCheck } from 'react-icons/fa';
-import { IoIosTrendingUp } from 'react-icons/io';
-import { IoMdRibbon } from 'react-icons/io';
+// import { IoIosTrendingUp } from 'react-icons/io';
+// import { IoMdRibbon } from 'react-icons/io';
 
 const HIPAAComplianceSection = () => {
   const features = [
@@ -212,7 +212,7 @@ const HIPAAComplianceSection = () => {
           </motion.div>
         </div>
         <div className="text-center mt-10">
-          <motion.button
+          {/* <motion.button
             whileHover={{
               scale: 1.05,
               boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
@@ -249,7 +249,7 @@ const HIPAAComplianceSection = () => {
             >
               <IoMdRibbon />
             </motion.div>
-          </motion.button>
+          </motion.button> */}
           <p className="text-gray-500 mt-3 text-sm">
             All our systems meet or exceed HIPAA security requirements
           </p>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { FaClipboardCheck } from 'react-icons/fa';
 import {
   RiBarcodeLine,
@@ -189,6 +190,7 @@ const ProcessFlowSection = () => {
           transition={{ delay: 0.6 }}
           className="text-center mt-16"
         >
+          <Link href="/contact">
           <motion.button
             whileHover={{
               scale: 1.05,
@@ -227,6 +229,7 @@ const ProcessFlowSection = () => {
               <IoMdRibbon />
             </motion.div>
           </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>

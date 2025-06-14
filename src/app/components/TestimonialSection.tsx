@@ -7,7 +7,7 @@ import {
   FaQuoteLeft,
   FaUserMd
 } from 'react-icons/fa';
-import { IoIosTrendingUp, IoMdRibbon } from 'react-icons/io';
+// import { IoIosTrendingUp, IoMdRibbon } from 'react-icons/io';
 import {
   RiArrowRightLine,
   // RiMedalFill,
@@ -246,7 +246,7 @@ const TestimonialSection = () => {
           transition={{ delay: 0.6 }}
           className="text-center"
         >
-          <motion.button 
+          {/* <motion.button 
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
@@ -283,7 +283,7 @@ const TestimonialSection = () => {
             >
               <IoMdRibbon />
             </motion.div>
-          </motion.button>
+          </motion.button> */}
           
           <motion.p
             initial={{ opacity: 0 }}

@@ -812,8 +812,10 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
+import Link from 'next/link';
 import { FaChartLine, FaClock, FaHandHoldingUsd, FaShieldAlt } from 'react-icons/fa';
 import { FiArrowRight } from 'react-icons/fi';
+
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -934,6 +936,7 @@ const HeroSection = () => {
             </motion.p>
             
             <div className="flex flex-row items-center gap-x-4">
+              <Link href="/contact">
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -970,7 +973,8 @@ const HeroSection = () => {
                   </motion.span>
                 </span>
               </motion.button>
-
+              </Link>
+<Link href="/contact">
               <motion.button
                 className="px-8 py-4 bg-white text-blue-600 font-medium rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors flex items-center"
                 whileHover={{ scale: 1.05 }}
@@ -978,6 +982,7 @@ const HeroSection = () => {
               >
                 Speak to an Expert <FiArrowRight className="ml-2" />
               </motion.button>
+              </Link>
             </div>
             
             {/* Features grid */}
@@ -1010,7 +1015,7 @@ const HeroSection = () => {
             className="relative"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <div className="relative  ">
               <video

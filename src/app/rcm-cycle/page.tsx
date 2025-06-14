@@ -482,9 +482,9 @@ import {
   RiExchangeFundsFill,
   RiMessage2Fill
 } from "react-icons/ri";
-import { FaFile } from 'react-icons/fa6'
+// import { FaFile } from 'react-icons/fa6'
 import { GiCash, GiHealthNormal } from 'react-icons/gi'
-import { IoMdRibbon } from 'react-icons/io'
+// import { IoMdRibbon } from 'react-icons/io'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 
@@ -1145,7 +1145,7 @@ const Page = () => {
                                     and continuous optimization. Your financial health is our top priority.
                                 </p>
 
-                                <motion.button
+                                {/* <motion.button
                                     whileHover={{
                                         scale: 1.05,
                                         boxShadow: "0px 5px 15px rgba(37, 99, 235, 0.4)"
@@ -1182,7 +1182,7 @@ const Page = () => {
                                     >
                                         <IoMdRibbon />
                                     </motion.div>
-                                </motion.button>
+                                </motion.button> */}
                             </motion.div>
 
                             {/* CTA Section */}

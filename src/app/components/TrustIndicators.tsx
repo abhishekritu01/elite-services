@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useAnimation, useInView } from 'framer-motion';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 // import {
 //   FaChevronRight,
@@ -303,6 +304,9 @@ const TrustIndicators = () => {
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                               We handle all types of medical billing under one roof. Whether you&lsquo;re a clinic, hospital, private practice, individual physician, or part of a specialty group, and more. From general care to advanced services, we&apos;ve got your billing covered.
                             </p>
+                            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                              Practices see faster reimbursements and higher collections within a limited time period.
+                            </p>
                           </div>
                         </div>
                       </motion.div>
@@ -464,6 +468,7 @@ const TrustIndicators = () => {
           transition={{ delay: 0.6 }}
           className="text-center mt-16"
         >
+          <Link href="/contact">
           <motion.button 
             whileHover={{ 
               scale: 1.05,
@@ -477,7 +482,7 @@ const TrustIndicators = () => {
             </span>
             
             <span className="relative flex items-center">
-              <span>Become Our Partner</span>
+              <span>Join Us</span>
               <motion.span
                 animate={{
                   x: [0, 4, 0],
@@ -502,6 +507,7 @@ const TrustIndicators = () => {
               <IoMdRibbon />
             </motion.div>
           </motion.button>
+          </Link>
           
           <motion.p
             initial={{ opacity: 0 }}
