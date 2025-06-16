@@ -206,7 +206,7 @@ const AIBillingBenefits = () => {
               ))}
             </div>
 
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.01 }}
               className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-100"
             >
@@ -221,7 +221,7 @@ const AIBillingBenefits = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

@@ -95,26 +95,53 @@ const NavBar = () => {
     normal: { scale: 1 }
   };
 
+  // const mobileMenuVariants = {
+  //   open: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       staggerChildren: 0.1,
+  //       delayChildren: 0.2,
+  //       when: "beforeChildren"
+  //     }
+  //   },
+  //   closed: {
+  //     opacity: 0,
+  //     y: "-100%",
+  //     transition: {
+  //       when: "afterChildren",
+  //       staggerChildren: 0.1,
+  //       staggerDirection: -1
+  //     }
+  //   }
+  // };
+
+
+
   const mobileMenuVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-        when: "beforeChildren"
-      }
-    },
-    closed: {
-      opacity: 0,
-      y: "-100%",
-      transition: {
-        when: "afterChildren",
-        staggerChildren: 0.1,
-        staggerDirection: -1
-      }
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      type: "spring", 
+      stiffness: 300, 
+      damping: 30,
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+      when: "beforeChildren"
     }
-  };
+  },
+  closed: {
+    opacity: 0,
+    y: "-100%",
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+      duration: 0.2
+    }
+  }
+};
 
   const navItemVariants = {
     open: {

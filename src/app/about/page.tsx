@@ -19,6 +19,7 @@ import NavBar from '../components/NavBar';
 const Page = () => {
   const [activeTab, setActiveTab] = useState<'story' | 'mission' | 'team'>('story');
   const [hoveredBenefit, setHoveredBenefit] = useState<number | null>(null);
+  // const [hoveredCard, setHoveredCard] = useState<number | null>(null); 
 
   const stats = [
     { value: "14+", label: "Years Experience", icon: <RiHistoryFill className="text-blue-500" /> },
@@ -50,26 +51,88 @@ const Page = () => {
     }
   ];
 
-  const leadership = [
+    const leadershipTeam = [
     {
-      name: "Dr. Sarah Johnson",
-      title: "CEO & Founder",
-      bio: "Board-certified physician with 20+ years in healthcare administration",
-      img: "/leadership/ceo.jpg"
+      name: 'Dr. Arjun Sachidanand',
+      title: 'Chairman & Founder',
+      // organization: 'Sudhanand Group',
+      bio: 'Visionary leader with extensive experience in healthcare and business, driving the organization to industry leadership.',
+      img: '/ArjunSachidanand.jpeg',
+      alt: 'Portrait of Dr. Arjun Sachidanand'
     },
     {
-      name: "Michael Chen",
-      title: "COO",
-      bio: "Healthcare operations expert specializing in RCM optimization",
-      img: "/leadership/coo.jpg"
+      name: 'Dr. Sini Arjun',
+      title: 'Managing Director',
+      // organization: 'Sudhanand Group',
+      bio: 'Dynamic leader passionate about innovation and excellence, committed to delivering exceptional value to clients.',
+      img: '/sinimam.jpg',
+      alt: 'Portrait of Dr. Sini Arjun'
     },
     {
-      name: "Lisa Rodriguez",
-      title: "Coding Director",
-      bio: "AAPC-certified coding specialist with 15 years experience",
-      img: "/leadership/coding-director.jpg"
+      name: 'Abhinandan S. Rao',
+      title: 'VP – New Initiatives & Investments',
+      // organization: 'Sudhanand Group',
+      bio: 'Strategic thinker focused on exploring new opportunities and driving innovation for organizational growth.',
+      img: '/Abhinandan S-Photoroom.png',
+      alt: 'Portrait of Abhinandan S. Rao'
+    },
+    {
+      name: 'Capt. Raghu M. Das',
+      title: 'Chief Operations Officer',
+      // organization: 'Sudhanand Group',
+      bio: 'Seasoned operations professional ensuring excellence in service delivery and operational management.',
+      img: '/captain.png',
+      alt: 'Portrait of Capt. Raghu M. Das'
+    },
+    {
+      name: 'Keshav Murthy',
+      title: 'VP - Internal Audit & Finance',
+      // organization: 'Sudhanand Group',
+      bio: 'Finance expert maintaining financial integrity and transparency through rigorous audit processes.',
+      img: '/Keshav murthy.png',
+      alt: 'Portrait of Keshav Murthy'
+    },
+    {
+      name: 'Vijay Asrani',
+      title: 'VP - Internal Finance',
+      // organization: 'Sudhanand Group',
+      bio: 'Financial strategist overseeing operations and driving performance through sound fiscal management.',
+      img: '/vijay.png',
+      alt: 'Portrait of Vijay Asrani'
+    },
+    {
+      name: 'Syed Abdul Wahab',
+      title: 'Facility & Project Manager',
+      // organization: 'SBPL',
+      bio: 'Skilled manager delivering high-quality projects on time and within budget for operational success.',
+      img: '/abdul.jpeg',
+      alt: 'Portrait of Syed Abdul Wahab'
     }
   ];
+
+ 
+  
+
+  // const leadership = [
+  //   {
+  //     name: "Dr. Sarah Johnson",
+  //     title: "CEO & Founder",
+  //     bio: "Board-certified physician with 20+ years in healthcare administration",
+  //     img: "/leadership/ceo.jpg"
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     title: "COO",
+  //     bio: "Healthcare operations expert specializing in RCM optimization",
+  //     img: "/leadership/coo.jpg"
+  //   },
+  //   {
+  //     name: "Lisa Rodriguez",
+  //     title: "Coding Director",
+  //     bio: "AAPC-certified coding specialist with 15 years experience",
+  //     img: "/leadership/coding-director.jpg"
+  //   }
+  // ];
 
   return (
     <>
@@ -160,26 +223,29 @@ const Page = () => {
               className="py-4"
             >
               {activeTab === 'story' && (
+                // <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="md:w-1/2"
+                    className=" w-full md:w-1/2"
                   >
                     {/* <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg"> */}
-                      <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+                      <div className="relative w-full aspect-[4/3] md:aspect-[3/2] rounded-xl overflow-hidden shadow-lg">
+                      {/* <div className="relative w-full h-64 md:h-[400px] rounded-xl overflow-hidden shadow-lg"> */}
                       <Image
                         src="/Our story.jpg"
                         alt="Our office"
-                        layout="fill"
-                        objectFit="cover"
-                        className="object-cover"
+                        fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-contain md:object-cover"
+          priority
                       />
                     </div>
                   </motion.div>
 
-                  <div className="md:w-1/2 ">
+                  <div className="w-full md:w-1/2 ">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">About Us:</h2>
                     <p className="text-gray-600 mb-6">
                       At RCM, we believe billing should never be a barrier to delivering exceptional patient care. Founded and led by physicians who understand the realities of modern healthcare, our mission is to remove the financial and administrative friction that keeps providers from doing what they do best caring for patients.
@@ -211,8 +277,9 @@ Headquartered in Idea Gateway Inc, New York , USA with a regional office in Myso
               )}
 
               {activeTab === 'mission' && (
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="md:w-1/2 order-2 md:order-1">
+                // <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="w-full md:w-1/2 md:order-2">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Driving Purpose</h2>
                     <p className="text-gray-600 mb-6">
                       <span className="text-blue-600 font-medium">To simplify medical billing</span> so healthcare providers can focus on what matters most -
@@ -236,7 +303,8 @@ Headquartered in Idea Gateway Inc, New York , USA with a regional office in Myso
                     className="md:w-1/2 order-1 md:order-2"
                   >
                     {/* <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg"> */}
-                     <div className="relative w-full h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden">
+                     {/* <div className="relative w-full h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden"> */}
+                     <div className="relative w-full h-64 md:h-[400px] rounded-xl overflow-hidden">
                       <Image
                         src="/Mission.png"
                         alt="Our mission"
@@ -248,38 +316,98 @@ Headquartered in Idea Gateway Inc, New York , USA with a regional office in Myso
                 </div>
               )}
 
-              {activeTab === 'team' && (
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8">Meet Our Leadership</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {leadership.map((member, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        whileHover={{ y: -5 }}
-                        className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100"
-                      >
-                        <div className="relative h-64 bg-gray-100">
-                          <Image
-                            src={member.img}
-                            alt={member.name}
-                            layout="fill"
-                            objectFit="cover"
-                          />
-                        </div>
-                        <div className="p-6">
-                          <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                          <p className="text-blue-600 mb-3">{member.title}</p>
-                          <p className="text-gray-600">{member.bio}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
+
+
+
+
+{activeTab === 'team' && (
+  <div className="mx-auto mt-8 sm:mt-12 px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="mx-auto max-w-2xl lg:mx-0"
+    >
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+        Meet <span className="text-blue-600">Our Leadership</span>
+      </h2>
+    </motion.div>
+
+    <div className="mx-auto mt-12 sm:mt-20 max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        {leadershipTeam.map((member, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ scale: 1.03 }}
+            className="relative bg-gray-50 border border-gray-200 rounded-2xl shadow-md overflow-hidden group transition duration-300 ease-in-out hover:shadow-xl min-h-[280px] sm:h-[320px]"
+          >
+            {/* Default View */}
+            <motion.div
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 z-10 text-center"
+            >
+              <motion.div
+                whileHover={{ y: -10 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+                className="mb-3 sm:mb-4"
+              >
+                <div className="relative h-24 w-24 sm:h-32 sm:w-32 mx-auto">
+                  <Image
+                    src={member.img}
+                    alt={member.alt}
+                    fill
+                    className="rounded-full border-4 border-white shadow-md object-fill"
+                    sizes="(max-width: 640px) 100px, (max-width: 1024px) 150px, 200px"
+                  />
                 </div>
-              )}
+              </motion.div>
+              <h4 className="text-lg font-semibold text-gray-800">{member.name}</h4>
+              <div className="text-sm text-gray-600 mt-1 sm:mt-2">
+                <p className="whitespace-pre-line text-blue-600">
+                  {member.title}
+                </p>
+              </div>
             </motion.div>
+
+            {/* Hover View - Slide Up Bio */}
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileHover={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              className="absolute inset-0 flex flex-col items-center justify-center bg-white p-4 sm:p-6 text-center z-20"
+            >
+              <div className="relative h-16 w-16 mb-3 sm:mb-4 mx-auto">
+                <Image
+                  src={member.img}
+                  alt={member.alt}
+                  fill
+                  className="rounded-full border-4 border-white shadow-md object-fill"
+                />
+              </div>
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed overflow-y-auto max-h-[180px]">
+                {member.bio}
+              </p>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+
+
+
+
+
+
+
+</motion.div>
           </AnimatePresence>
         </div>
         {/* Stats Section */}
