@@ -1029,7 +1029,7 @@ const HeroSection = () => {
               /> 
               {/* Video overlay elements */}
               <motion.div 
-                className="absolute inset-0 bg-black/2"
+                className="absolute inset-0 bg-black/1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}

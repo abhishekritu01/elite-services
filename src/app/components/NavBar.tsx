@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import { AnimatePresence, motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
-import { FaBars, FaPhoneAlt, FaTimes } from 'react-icons/fa';
-import { FiChevronDown } from 'react-icons/fi';
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { FaBars, FaPhoneAlt, FaTimes } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
 import { LuHandHelping } from "react-icons/lu";
-import Link from 'next/link';
-import { FaFileInvoiceDollar, FaChartLine } from 'react-icons/fa';
+import Link from "next/link";
+import { FaFileInvoiceDollar, FaChartLine } from "react-icons/fa";
 // import {  FaUserMd } from 'react-icons/fa';
+import Image from "next/image";
 
 interface DropdownItem {
   icon: React.ReactNode;
@@ -36,8 +37,8 @@ const NavBar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -46,53 +47,68 @@ const NavBar = () => {
   };
 
   const navLinks: NavLink[] = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     {
-      name: 'Services',
-      href: '#services',
+      name: "Services",
+      href: "#services",
       dropdown: [
-        { icon: <FaFileInvoiceDollar />, name: 'Credentialing', desc: 'End-to-end billing solutions', href: '/credentialing' },
-        { icon: <FaChartLine />, name: 'Revenue Cycle', desc: 'Optimize your revenue flow', href: 'rcm-cycle' },
+        {
+          icon: <FaFileInvoiceDollar />,
+          name: "Credentialing",
+          desc: "End-to-end billing solutions",
+          href: "/credentialing",
+        },
+        {
+          icon: <FaChartLine />,
+          name: "Revenue Cycle",
+          desc: "Optimize your revenue flow",
+          href: "rcm-cycle",
+        },
         // { icon: <FaUserMd />, name: 'Provider Solutions', desc: 'Tailored for practitioners' },
-        { icon: <LuHandHelping />, name: 'Other Services', desc: 'View our other services', href: '/services' }
-      ]
+        {
+          icon: <LuHandHelping />,
+          name: "Other Services",
+          desc: "View our other services",
+          href: "/services",
+        },
+      ],
     },
     // { name: 'Services', href: '/services' },
-    { name: 'HIPAA', href: '/hippa' },
+    { name: "HIPAA", href: "/hippa" },
     // { name: 'Contact', href: '/contact' },
-    { name: 'Career', href: '/career' }
+    { name: "Career", href: "/career" },
   ];
 
   // Animation variants
-  const navbarVariants = {
-    scrolled: {
-      height: '70px',
-      padding: '0.5rem 0',
-      backgroundColor: 'rgba(255, 255, 255, 0.98)',
-      boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-      backdropFilter: 'blur(8px)',
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut"
-      }
-    },
-    normal: {
-      height: '90px',
-      padding: '1.5rem 0',
-      backgroundColor: 'rgba(255, 255, 255, 1)',
-      boxShadow: 'none',
-      backdropFilter: 'blur(0px)',
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
-  };
+  // const navbarVariants = {
+  //   scrolled: {
+  //     height: "70px",
+  //     padding: "0.5rem 0",
+  //     backgroundColor: "rgba(255, 255, 255, 0.98)",
+  //     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+  //     backdropFilter: "blur(8px)",
+  //     transition: {
+  //       duration: 0.3,
+  //       ease: "easeInOut",
+  //     },
+  //   },
+  //   normal: {
+  //     height: "90px",
+  //     padding: "1.5rem 0",
+  //     backgroundColor: "rgba(255, 255, 255, 1)",
+  //     boxShadow: "none",
+  //     backdropFilter: "blur(0px)",
+  //     transition: {
+  //       duration: 0.3,
+  //       ease: "easeInOut",
+  //     },
+  //   },
+  // };
 
   const logoVariants = {
     scrolled: { scale: 0.9 },
-    normal: { scale: 1 }
+    normal: { scale: 1 },
   };
 
   // const mobileMenuVariants = {
@@ -116,72 +132,68 @@ const NavBar = () => {
   //   }
   // };
 
-
-
   const mobileMenuVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    transition: { 
-      type: "spring", 
-      stiffness: 300, 
-      damping: 30,
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-      when: "beforeChildren"
-    }
-  },
-  closed: {
-    opacity: 0,
-    y: "-100%",
-    transition: {
-      when: "afterChildren",
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-      duration: 0.2
-    }
-  }
-};
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+        when: "beforeChildren",
+      },
+    },
+    closed: {
+      opacity: 0,
+      y: "-100%",
+      transition: {
+        when: "afterChildren",
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+        duration: 0.2,
+      },
+    },
+  };
 
   const navItemVariants = {
     open: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 }
+      transition: { type: "spring", stiffness: 300, damping: 24 },
     },
     closed: {
       opacity: 0,
       y: -20,
-      transition: { duration: 0.2 }
-    }
+      transition: { duration: 0.2 },
+    },
   };
 
   const dropdownVariants = {
     open: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", bounce: 0, duration: 0.4 }
+      transition: { type: "spring", bounce: 0, duration: 0.4 },
     },
     closed: {
       opacity: 0,
       y: -10,
-      transition: { duration: 0.2 }
-    }
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
     <motion.nav
-      className="fixed w-full z-50 top-0 left-0 px-4 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-gray-50 to-white fixed w-full z-50 top-0 left-0 px-4 sm:px-6 lg:px-8"
       initial="normal"
       animate={scrolled ? "scrolled" : "normal"}
-      variants={navbarVariants}
+       style={{ height: scrolled ? '70px' : '90px' }}
+      // variants={navbarVariants}
     >
       <div className="max-w-7xl mx-auto h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo with scaling animation */}
-
-
-
 
           <motion.div
             className="flex-shrink-0 flex items-center"
@@ -191,11 +203,18 @@ const NavBar = () => {
           >
             <Link href="/" className="flex items-center">
               {/* Logo image */}
-              <div className="h-10 w-10 mr-2">
-                <img
-                  src="/revenuemed logo.jpeg"
-                  alt="RevenueMed Logo"
-                  className="h-full w-full object-contain"
+              <div className=" mr-2">
+                {/* <img
+                  src="/SINIMEDS LOGO.png"
+                  alt="Sinimeds Logo"
+                  className="h-full w-full object-fill"
+                /> */}
+                <Image
+                  src="/SINIMEDS LOGO.png"
+                  alt="SINIMEDS LOGO.png"
+                  width={80}
+                  height={20}
+                  className="object-cover"
                 />
               </div>
               {/* Text with gradient */}
@@ -207,7 +226,6 @@ const NavBar = () => {
               </div>
             </Link>
           </motion.div>
-
 
           {/* <motion.div 
   className="flex-shrink-0 flex items-center"
@@ -223,10 +241,6 @@ const NavBar = () => {
   </Link>
 </motion.div> */}
 
-
-
-
-
           {/* <motion.div 
             className="flex-shrink-0 flex items-center"
             variants={logoVariants}
@@ -238,18 +252,17 @@ const NavBar = () => {
             </Link>
           </motion.div> */}
 
-
-
-
-
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 h-full">
             {navLinks.map((link, index) => (
               <div key={index} className="relative h-full flex items-center">
                 <Link
                   href={link.href}
-                  className={`flex items-center px-3 py-2 text-sm font-medium rounded-md group ${activeDropdown === index ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+                  className={`flex items-center px-3 py-2 text-sm font-medium rounded-md group ${
+                    activeDropdown === index
+                      ? "text-blue-600"
+                      : "text-gray-700 hover:text-blue-600"
+                  }`}
                   // whileHover={{ scale: 1.05 }}
                   onClick={(e) => {
                     if (link.dropdown) {
@@ -288,10 +301,14 @@ const NavBar = () => {
                                 whileHover={{ x: 5 }}
                                 transition={{ delay: 0.05 * i }}
                               >
-                                <span className="text-blue-500 mr-3 mt-0.5">{item.icon}</span>
+                                <span className="text-blue-500 mr-3 mt-0.5">
+                                  {item.icon}
+                                </span>
                                 <div>
                                   <p className="font-medium">{item.name}</p>
-                                  <p className="text-xs text-gray-500">{item.desc}</p>
+                                  <p className="text-xs text-gray-500">
+                                    {item.desc}
+                                  </p>
                                 </div>
                               </motion.div>
                             </Link>
@@ -304,51 +321,49 @@ const NavBar = () => {
               </div>
             ))}
 
-
-
-<Link href="/contact" passHref>
-            <motion.div
-              // href="#contact"
-              className="ml-4 px-4 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] text-white text-sm font-medium rounded-md flex items-center shadow-lg hover:shadow-xl transition-all"
-              style={{ minWidth: '120px', minHeight: '44px' }}
-              whileHover={{
-                scale: 1.05,
-                transition: { duration: 0.2 }
-              }}
-              whileTap={{
-                scale: 0.95,
-                transition: { duration: 0.1 }
-              }}
-              animate={{
-                backgroundPosition: ['0% 50%', '100% 50%'],
-              }}
-              transition={{
-                backgroundPosition: {
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "linear"
-                }
-              }}
-            >
-              <span className="relative flex items-center">
-                <span>Contact Us</span>
-                <motion.span
-                  animate={{
-                    x: [0, 5, 0],
-                    transition: {
-                      duration: 1.5,
-                      repeat: Infinity,
-                      repeatType: "loop",
-                      ease: "easeInOut"
-                    }
-                  }}
-                  className="ml-2"
-                >
-                  <FaPhoneAlt className="text-sm" />
-                </motion.span>
-              </span>
-            </motion.div>
+            <Link href="/contact" passHref>
+              <motion.div
+                // href="#contact"
+                className="ml-4 px-4 py-2.5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] text-white text-sm font-medium rounded-md flex items-center shadow-lg hover:shadow-xl transition-all"
+                style={{ minWidth: "120px", minHeight: "44px" }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.2 },
+                }}
+                whileTap={{
+                  scale: 0.95,
+                  transition: { duration: 0.1 },
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%"],
+                }}
+                transition={{
+                  backgroundPosition: {
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "linear",
+                  },
+                }}
+              >
+                <span className="relative flex items-center">
+                  <span>Contact Us</span>
+                  <motion.span
+                    animate={{
+                      x: [0, 5, 0],
+                      transition: {
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut",
+                      },
+                    }}
+                    className="ml-2"
+                  >
+                    <FaPhoneAlt className="text-sm" />
+                  </motion.span>
+                </span>
+              </motion.div>
             </Link>
           </div>
 
@@ -358,6 +373,7 @@ const NavBar = () => {
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none"
               whileTap={{ scale: 0.95 }}
+              style={{ minWidth: '44px', minHeight: '44px' }} 
             >
               {isOpen ? (
                 <FaTimes className="h-6 w-6" />
@@ -381,16 +397,26 @@ const NavBar = () => {
           >
             <div className="px-4 pt-4 pb-8 space-y-2">
               {navLinks.map((link, index) => (
-                <motion.div key={index} variants={navItemVariants} className="border-b border-gray-100 last:border-0">
+                <motion.div
+                  key={index}
+                  variants={navItemVariants}
+                  className="border-b border-gray-100 last:border-0"
+                >
                   {link.dropdown ? (
                     <div className="mb-1">
                       <button
                         onClick={() => toggleDropdown(index)}
-                        className={`w-full flex justify-between items-center px-3 py-3 text-base font-medium rounded-lg ${activeDropdown === index ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-50'}`}
+                        className={`w-full flex justify-between items-center px-3 py-3 text-base font-medium rounded-lg ${
+                          activeDropdown === index
+                            ? "bg-blue-50 text-blue-600"
+                            : "text-gray-700 hover:bg-gray-50"
+                        }`}
                       >
                         <span>{link.name}</span>
                         <motion.span
-                          animate={{ rotate: activeDropdown === index ? 180 : 0 }}
+                          animate={{
+                            rotate: activeDropdown === index ? 180 : 0,
+                          }}
                           transition={{ duration: 0.2 }}
                         >
                           <FiChevronDown />
@@ -403,28 +429,32 @@ const NavBar = () => {
                             className="pl-4 space-y-2 mb-2"
                             variants={dropdownVariants}
                             initial="closed"
-                      animate="open"
-                      exit="closed"
+                            animate="open"
+                            exit="closed"
                           >
-
-
                             {link.dropdown.map((item, i) => (
-                              <Link href={item.href || "#"} key={i} onClick={() => setIsOpen(false)}>
+                              <Link
+                                href={item.href || "#"}
+                                key={i}
+                                onClick={() => setIsOpen(false)}
+                              >
                                 <motion.div
                                   className="block px-4 py-3 text-base font-medium text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-600 flex items-start cursor-pointer"
                                   whileHover={{ x: 5 }}
                                   transition={{ delay: 0.05 * i }}
                                 >
-                                  <span className="text-blue-500 mr-3 mt-0.5">{item.icon}</span>
+                                  <span className="text-blue-500 mr-3 mt-0.5">
+                                    {item.icon}
+                                  </span>
                                   <div>
                                     <p className="font-medium">{item.name}</p>
-                                    <p className="text-sm text-gray-500">{item.desc}</p>
+                                    <p className="text-sm text-gray-500">
+                                      {item.desc}
+                                    </p>
                                   </div>
                                 </motion.div>
                               </Link>
                             ))}
-
-
 
                             {/* {link.dropdown.map((item, i) => (
                               <motion.a
@@ -441,13 +471,6 @@ const NavBar = () => {
                                 </div>
                               </motion.a>
                             ))} */}
-
-
-
-
-
-
-
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -464,52 +487,51 @@ const NavBar = () => {
                 </motion.div>
               ))}
 
-
-<Link href="/contact" passHref>
-              <motion.div
-                // href="#contact"
-                className="block w-full mt-4 px-6 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600  text-white text-lg font-medium rounded-lg flex items-center justify-center shadow-lg hover:shadow-xl transition-all active:scale-95 active:shadow-inner"
-                style={{ minHeight: '60px' }} 
-                variants={navItemVariants}
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.2 }
-                }}
-                whileTap={{
-                  scale: 0.98,
-                  transition: { duration: 0.1 }
-                }}
-                animate={{
-                  backgroundPosition: ['0% 50%', '100% 50%'],
-                }}
-                transition={{
-                  backgroundPosition: {
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "linear"
-                  }
-                }}
-                onClick={() => setIsOpen(false)}
-              >
-                <span className="relative flex items-center">
-                  <span>Contact Us</span>
-                  <motion.span
-                    animate={{
-                      x: [0, 5, 0],
-                      transition: {
-                        duration: 1.5,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut"
-                      }
-                    }}
-                    className="ml-2"
-                  >
-                    <FaPhoneAlt className="text-lg" />
-                  </motion.span>
-                </span>
-              </motion.div>
+              <Link href="/contact" passHref>
+                <motion.div
+                  // href="#contact"
+                  className="block w-full mt-4 px-6 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600  text-white text-lg font-medium rounded-lg flex items-center justify-center shadow-lg hover:shadow-xl transition-all active:scale-95 active:shadow-inner"
+                  style={{ minHeight: "60px" }}
+                  variants={navItemVariants}
+                  whileHover={{
+                    scale: 1.02,
+                    transition: { duration: 0.2 },
+                  }}
+                  whileTap={{
+                    scale: 0.98,
+                    transition: { duration: 0.1 },
+                  }}
+                  animate={{
+                    backgroundPosition: ["0% 50%", "100% 50%"],
+                  }}
+                  transition={{
+                    backgroundPosition: {
+                      duration: 3,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "linear",
+                    },
+                  }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span className="relative flex items-center">
+                    <span>Contact Us</span>
+                    <motion.span
+                      animate={{
+                        x: [0, 5, 0],
+                        transition: {
+                          duration: 1.5,
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          ease: "easeInOut",
+                        },
+                      }}
+                      className="ml-2"
+                    >
+                      <FaPhoneAlt className="text-lg" />
+                    </motion.span>
+                  </span>
+                </motion.div>
               </Link>
 
               {/* <motion.a
@@ -531,43 +553,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 'use client';
 
@@ -724,9 +709,6 @@ export default NavBar;
 //         <div className="flex items-center justify-between h-full">
 //           {/* Logo with scaling animation */}
 
-
-
-
 //           <motion.div
 //             className="flex-shrink-0 flex items-center"
 //             variants={logoVariants}
@@ -752,8 +734,7 @@ export default NavBar;
 //             </Link>
 //           </motion.div>
 
-
-//           {/* <motion.div 
+//           {/* <motion.div
 //   className="flex-shrink-0 flex items-center"
 //   variants={logoVariants}
 //   animate={scrolled ? "scrolled" : "normal"}
@@ -767,11 +748,7 @@ export default NavBar;
 //   </Link>
 // </motion.div> */}
 
-
-
-
-
-//           {/* <motion.div 
+//           {/* <motion.div
 //             className="flex-shrink-0 flex items-center"
 //             variants={logoVariants}
 //             animate={scrolled ? "scrolled" : "normal"}
@@ -781,11 +758,6 @@ export default NavBar;
 //               Revenue<span className="text-gray-800">Med</span>
 //             </Link>
 //           </motion.div> */}
-
-
-
-
-
 
 //           {/* Desktop Navigation */}
 //           <div className="hidden md:flex items-center space-x-6 h-full">
@@ -846,9 +818,6 @@ export default NavBar;
 //                 )}
 //               </div>
 //             ))}
-
-
-
 
 //             <motion.a
 //               href="#contact"
@@ -945,7 +914,6 @@ export default NavBar;
 //                             variants={dropdownVariants}
 //                           >
 
-
 //                             {link.dropdown.map((item, i) => (
 //                               <Link href={item.href || "#"} key={i} onClick={() => setIsOpen(false)}>
 //                                 <motion.div
@@ -960,8 +928,6 @@ export default NavBar;
 //                                 </motion.div>
 //                               </Link>
 //                             ))}
-
-
 
 //                             {/* {link.dropdown.map((item, i) => (
 //                               <motion.a
@@ -979,12 +945,6 @@ export default NavBar;
 //                               </motion.a>
 //                             ))} */}
 
-
-
-
-
-
-
 //                           </motion.div>
 //                         )}
 //                       </AnimatePresence>
@@ -1000,8 +960,6 @@ export default NavBar;
 //                   )}
 //                 </motion.div>
 //               ))}
-
-
 
 //               <motion.a
 //                 href="#contact"
@@ -1066,47 +1024,6 @@ export default NavBar;
 // };
 
 // export default NavBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // 'use client';
 
@@ -1257,7 +1174,6 @@ export default NavBar;
 //         <div className="flex items-center justify-between h-full">
 //           {/* Logo with scaling animation */}
 
-
 // <motion.div
 //   className="flex-shrink-0 flex items-center"
 //   variants={logoVariants}
@@ -1272,10 +1188,6 @@ export default NavBar;
 //   </Link>
 // </motion.div>
 
-
-
-
-
 //           {/* <motion.div
 //             className="flex-shrink-0 flex items-center"
 //             variants={logoVariants}
@@ -1286,11 +1198,6 @@ export default NavBar;
 //               Revenue<span className="text-gray-800">Med</span>
 //             </Link>
 //           </motion.div> */}
-
-
-
-
-
 
 //           {/* Desktop Navigation */}
 //           <div className="hidden md:flex items-center space-x-6 h-full">

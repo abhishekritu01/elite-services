@@ -50,41 +50,42 @@ const HIPAAComplianceSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-blue-50 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    // <div className="bg-gradient-to-b from-gray-50 to-blue-50 py-12 md:py-16">
+   <div className="bg-gradient-to-b from-gray-50 to-blue-50 pt-[70px] pb-8 md:pt-[90px] md:pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+       <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-14"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-3">
+           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-600 mb-4">
             <RiAlertFill className="mr-2" />
             <span className="font-medium">COMPLIANCE</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               HIPAA Compliance
             </span> You Can Trust
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Privacy and security built into everything we do
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Left Column */}
-          <motion.div
+         <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <div className="bg-white rounded-xl shadow-md h-full p-6 md:p-7 border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <RiFileShieldFill className="text-blue-500 mr-3 text-3xl" />
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <RiFileShieldFill className="text-blue-500 mr-3 text-2xl sm:text-3xl" />
                 What Is HIPAA?
               </h3>
               <p className="text-gray-700 mb-6">
@@ -107,7 +108,7 @@ const HIPAAComplianceSection = () => {
                     viewport={{ once: true }}
                     className="flex items-start text-gray-700"
                   >
-                    <span className="inline-block bg-blue-100 text-blue-600 rounded-full p-1 mr-3 mt-1">
+                   <span className="inline-block bg-blue-100 text-blue-600 rounded-full p-1 mr-3 mt-1">
                       <RiFileShieldFill className="text-sm" />
                     </span>
                     {item}
@@ -115,24 +116,24 @@ const HIPAAComplianceSection = () => {
                 ))}
               </ul>
 
-               <h4 className="font-bold text-gray-800 mb-4">Compliance Measures</h4>
-                <ul className="space-y-3">
-                  {complianceSteps.map((step, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start text-gray-700"
-                    >
+              <h4 className="font-bold text-gray-800 mb-4">Compliance Measures</h4>
+              <ul className="space-y-3">
+                {complianceSteps.map((step, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start text-gray-700"
+                  >
                       <span className="inline-flex items-center justify-center bg-green-100 text-green-600 rounded-full w-6 h-6 mr-3 mt-0.5 text-xs">
-                        {index + 1}
-                      </span>
-                      {step}
-                    </motion.li>
-                  ))}
-                </ul>
+                      {index + 1}
+                    </span>
+                    {step}
+                  </motion.li>
+                ))}
+              </ul>
 
               {/* <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
                 <h4 className="font-bold text-blue-800 mb-3 flex items-center">
@@ -147,37 +148,35 @@ const HIPAAComplianceSection = () => {
           </motion.div>
 
           {/* Right Column */}
-          <motion.div
+         <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-xl shadow-md p-6 md:p-7 border-l-4 border-green-500">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <RiShieldKeyholeFill className="text-green-500 mr-3 text-3xl" />
+            <div className="bg-white rounded-xl shadow-md h-full p-6 md:p-7 border-l-4 border-green-500">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <RiShieldKeyholeFill className="text-green-500 mr-3 text-2xl sm:text-3xl" />
                 Our Security Framework
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
                 {features.map((feature, index) => (
                   <motion.div
                     key={index}
                     whileHover={{ y: -5 }}
                     className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-200 transition-all"
                   >
-                    <div className="text-3xl mb-3">
+                    <div className="text-2xl sm:text-3xl mb-3">
                       {feature.icon}
                     </div>
-                    <h4 className="font-bold text-gray-800 mb-2">{feature.title}</h4>
-                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                    <h4 className="font-bold text-gray-800 mb-2 text-sm sm:text-base">{feature.title}</h4>
+                    <p className="text-gray-600 text-xs sm:text-sm">{feature.description}</p>
                   </motion.div>
                 ))}
               </div>
 
-              <div>
-
-                <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
+              <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
                 <h4 className="font-bold text-blue-800 mb-3 flex items-center">
                   <RiAlertFill className="mr-2" />
                   Our Commitment
@@ -185,7 +184,7 @@ const HIPAAComplianceSection = () => {
                 <p className="text-blue-700">
                   &quot;We work with sensitive health information daily. Protecting it isn&apos;t just a legal requirement—it&quot;s a responsibility we take seriously. HIPAA compliance is foundational to our operations.&quot;
                 </p>
-              </div>
+             
 
 
 
