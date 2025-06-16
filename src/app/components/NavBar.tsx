@@ -188,7 +188,11 @@ const NavBar = () => {
       className="bg-gradient-to-b from-gray-50 to-white fixed w-full z-50 top-0 left-0 px-4 sm:px-6 lg:px-8"
       initial="normal"
       animate={scrolled ? "scrolled" : "normal"}
-       style={{ height: scrolled ? '70px' : '90px' }}
+       style={{ 
+    height: scrolled ? '70px' : '90px',
+    minHeight: scrolled ? '70px' : '90px' // Add min-height to prevent collapse
+  }}
+       
       // variants={navbarVariants}
     >
       <div className="max-w-7xl mx-auto h-full">
@@ -368,12 +372,12 @@ const NavBar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center z-50">
+          <div className="md:hidden flex items-center z-50 ml-4">
             <motion.button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none"
               whileTap={{ scale: 0.95 }}
-              style={{ minWidth: '44px', minHeight: '44px' }} 
+              style={{ minWidth: '44px', minHeight: '44px'}} 
             >
               {isOpen ? (
                 <FaTimes className="h-6 w-6" />

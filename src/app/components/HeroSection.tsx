@@ -1017,7 +1017,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <div className="relative  ">
+            <div className="relative">
               <video
                 ref={videoRef}
                 className="w-full h-full object-fill"
@@ -1029,7 +1029,7 @@ const HeroSection = () => {
               /> 
               {/* Video overlay elements */}
               <motion.div 
-                className="absolute inset-0 bg-black/1"
+                className="absolute inset-0 bg-black/2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
