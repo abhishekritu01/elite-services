@@ -205,30 +205,66 @@ const NavBar = () => {
             animate={scrolled ? "scrolled" : "normal"}
             whileHover={{ scale: 1.05 }}
           >
-            <Link href="/" className="flex items-center">
+
+
+
+
+
+
+
+             {/* <Link href="/" className="flex items-center"> */}
               {/* Logo image */}
-              <div className=" mr-2">
+              {/* <div className=" mr-2"> */}
                 {/* <img
                   src="/SINIMEDS LOGO.png"
                   alt="Sinimeds Logo"
                   className="h-full w-full object-fill"
                 /> */}
-                <Image
-                  src="/SINIMEDS LOGO.png"
+                {/* <Image
+                  src="/SINIMEDS LOGO 2 (1).png"
                   alt="SINIMEDS LOGO.png"
                   width={80}
-                  height={20}
+                  height={40}
                   className="object-cover"
                 />
-              </div>
+              </div> */}
               {/* Text with gradient */}
-              <div className="text-2xl font-bold">
+              {/* <div className="text-2xl font-bold">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] animate-gradient">
                   Sini
                 </span>
                 <span className="text-gray-800">Meds</span>
               </div>
-            </Link>
+            </Link> */}
+
+
+
+
+
+
+
+
+
+           <Link href="/" className="flex items-center">
+  {/* Logo image */}
+  <div className="mr-2">
+    <Image
+      src="/SINIMEDS LOGO 2 (1).png"
+      alt="SINIMEDS LOGO"
+      width={165}  
+      height={56}  
+      className="object-cover"
+    />
+  </div>
+</Link>
+
+
+
+
+
+
+
+
           </motion.div>
 
           {/* <motion.div 
